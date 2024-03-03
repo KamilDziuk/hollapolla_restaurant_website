@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>HollaPolla</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <script src="script.js" async></script>
+  <link rel="stylesheet" type="text/css" href="style.css"> -->
+
+</head>
+<body>
+  <div class="nav_headar">
+      
+    <div class="container">
+      <nav class="navbar">
+        <a href="https://hollapolla.nl/" class="nav-logo">HollaPolla</a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+                <a href="https://hollapolla.nl/" class="nav-link">Home</a>        
+           </li>
+           <li class="nav-item">
+                <a href="menu.html" class="nav-link">Menu</a>     
+         </li>
+      </li>
+      <!-- <li class="nav-item">
+         <a href="#" class="nav-link">Reservations</a>        
+    </li> -->
+  </li>
+
+  <li class="nav-item">
+     <a href="#aboutus" class="nav-link">About us</a>        
+</li>
+<li class="nav-item">
+  <a href="#contact" class="nav-link">Contact</a>        
+</li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+   </div>
+  </div>
+<header>
+  <div class="center">
+    <h1 class="alex-brush">Welcome</h1>
+    <h2>Hollapolla</h2>
+    <span id="asterisk">*</span>
+ <p>The largest Polish restaurant in the Netherlands</p>
+    <br> 
+
+  </div>
+</header>
+
+<section class="add-padding add-flex">
+  <div class="center-text">
+    <h1 class="alex-brush"><span class="custom-font"></span><br />The largest Polish restaurant in the Netherlands</h1><br>
+    <section id="aboutus"></section>
+    <p>HollaPolla restaurant is a place where good food is combined with a pleasant atmosphere and great music. A culinary journey at HollaPolla is a real feast for the palate, and the harmonious mix of flavors makes the dishes unforgettable. Additionally, the atmosphere in the restaurant is emphasized by well-selected music, creating a unique atmosphere that encourages you to relax and enjoy a unique experience.</p>
+  
+  </div>
+  <div  class="stuffed-cherries" data-aos="fade-left" data-aos-delay="300">
+  </div>
+</section>
+
+<section class="bread-background center-h1">
+  <h1 class="custom-h1 alex-brush"><span class="custom-font">Exceptional food</span><br />good fun</h1>
+</section>
+
+<section class="menu add-flex add-padding">
+  <div class="menu-images">
+    <img src="https://hollapolla.nl/food0.jpg"  data-aos="fade-down" data-aos-delay="300"/>
+    <img src="https://hollapolla.nl/food1.jpg" data-aos="fade-left" data-aos-delay="300"/>
+    <img src="https://hollapolla.nl/food2.jpg" data-aos="fade-right" data-aos-delay="300"/>
+    <img src="https://hollapolla.nl/food3.jpg" data-aos="fade-up" data-aos-delay="300"/>
+    
+  </div>
+  <div class="center-text">
+    <h1><span class="custom-font alex-brush"></span><br />MENU</h1><br>
+    <h2></h2>
+    <p>HollaPolla restaurant is a place where you can enjoy unique flavors and experience a real feast for the palate. Our kitchen serves delicious dishes that combine traditional flavors with a modern approach to cooking.</p>
+    <a href="menu.html">view the full menu</a>
+
+  </div>
+</section>
+
+<section class="cake-background center-h1">
+  <h1 class="custom-h1"><span class="custom-font alex-brush">The perfect</span><br />BLEND</h1>
+</section>
+
+<section class="add-flex reservation-section">
+  <div class="center-text add-padding">
+    <h1><span class="custom-font alex-brush">Drinks</span><br />DELIGHT</h1>
+
+    <p>A place where you will immerse yourself in a unique atmosphere and enjoy delicious dishes. But that's not all - HollaPolla's offer also includes a wide selection of creative drinks and refreshing beverages that will perfectly complement your culinary experience. Enjoy the taste and atmosphere in the HollaPolla restaurant, where every bite and every sip is a real pleasure for the senses.</p>
+
+  </div>
+  <div>
+    <img src="https://hollapolla.nl/pexels-chevanon-photography-312418.jpg" data-aos="fade-up" data-aos-delay="300"/>
+   
+  </div>
+</section>
+
+<!-- footer -->
+<footer>
+
+  <div class="content_footer">HollaPolla
+    <!-- <img
+      src="#"
+      class="footer_logo"> -->
+      <br>
+      <br>
+      <br>
+    <div class="locations">
+      <h4>Address</h4>
+      <div class="location-1">
+        <h5>HollaPolla<br>Wilhelminapark 66, 5041 ED Tilburg, Holandia<br>kvk: 92146872</h5>
+      </div>
+
+    </div>
+    <div class="locations">
+      <section id="contact"></section>
+      <h4>Contact</h4>
+      <div class="location-1">
+        <h5>Phone: + 31 0 658 723 606 <br>Email: kontakt@hollapolla.nl </h5>
+      </div>
+    </div>
+
+    <div class="locations">
+      <h4>Statute</h4>
+      <div class="location-1">
+        <h5>Privacy policy<br>Cookies policy</h5>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+  <div class="copyright">
+    <p><small>HollaPolla All rights reserved. All rights
+        reserved.<span></span></small></p>
+    <p><small></small></p>
+  </div>
+</footer>
+<!-- partial -->
+<script>
+
+
+let hamburger = document.querySelector(".hamburger"); 
+let navMenu = document.querySelector(".nav-menu");  
+
+hamburger.addEventListener("click", () =>
+{
+hamburger.classList.toggle("active");
+navMenu.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-link").forEach(n =>n.addEventListener("click", () =>
+{
+hamburger.classList.remove("active");
+navMenu.classList.remove("active");
+}));
+
+window.addEventListener("scroll", () =>
+{
+let nav_headar = document.querySelector(".nav_headar");
+nav_headar.classList.toggle("sticky", window.scrollY > 0);
+});
+</script>
+<style>
+  
+
+/*
+  GLOBAL
+*/
+h2 {
+  
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+button {
+  border: 0;
+  background: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+/* heder */
+
+header {
+  height: 690px;
+  width: 100%;
+  background: url("https://hollapolla.nl/backgroundMain.webp") 0px;
+  background-size: cover;
+  background-attachment: fixed;
+  display:flex;
+  flex-direction: column;
+  /*
+    NAV
+  */
+  /*
+    CENTER HEADER TEXT
+  */
+}
+header nav {
+  padding: 15px 35px;
+  display: flex;
+  position: relative;
+}
+header nav h2 {
+
+  margin-bottom: 0;
+  flex: 1;
+  letter-spacing: 3px;
+  font-family: "Overpass Mono", monospace !important;
+}
+header nav h2 #logo {
+  color: lightgray;
+  text-transform: uppercase;
+  border-bottom: solid 2px lightgray;
+}
+header nav .nav-button {
+  color: #c0c0c0;
+  font-size: 23px;
+}
+header nav div {
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  text-align: center;
+  transform: scale(0);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+header nav div ul {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header nav div ul .exit-menu {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: lightgray;
+  font-size: 20px;
+  padding: 10px;
+}
+header nav div ul li {
+  font-family: "PT Sans", sans-serif !important;
+  text-transform: uppercase;
+}
+header nav div ul li a {
+  display: block;
+  color: lightgray;
+  padding: 15px 5px;
+  transition: all 0.4s;
+}
+header nav div ul li a:hover, header nav div ul li a .active:hover {
+  color: #be8040;
+  border-bottom-color: #be8040;
+}
+header .center {
+  line-height: 0;
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+header .center h1 {
+  font-family: "Alex Brush", cursive !important;
+  color: #be8040;
+  font-size: 100px;
+  margin-bottom: 34px;
+}
+header .center h2 {
+  margin-top: 100px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 80px;
+}
+header .center #asterisk {
+  margin-top: 50px;
+  color: #be8040;
+  line-height: 0.5;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+header .center #asterisk:before, header .center #asterisk:after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  height: 1px;
+  width: 0%;
+  opacity: 0;
+  background: white;
+  margin-top: 0px;
+}
+header .center #asterisk:before {
+  margin-right: 10px;
+}
+header .center #asterisk:after {
+  margin-left: 10px;
+}
+header .center p {
+  text-transform: uppercase;
+  margin-top: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+nav div.show {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/*
+  SECTIONS
+*/
+/*
+  CLASSES
+*/
+.custom-font {
+  font-family: "Alex Brush", cursive;
+  color: #be8040;
+  font-size: 75px;
+  line-height: 0;
+}
+
+.add-padding {
+  padding: 25px;
+}
+
+.center-text {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  color: #4d4d4d;
+}
+.center-text h2 {
+
+  line-height: 0;
+}
+.center-text p {
+  margin-top: 0;
+  font-family: "PT Sans", sans-serif;
+  line-height: 1.5;
+}
+.center-text a {
+  font-family: "PT Sans", sans-serif;
+  color: #be8040;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-bottom: solid 2px #be8040;
+}
+
+.add-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.add-flex .stuffed-cherries {
+  background: url("https://hollapolla.nl/pexels-valeria-boltneva-842571e.jpg") no-repeat center center;
+  background-size: cover;
+  height: 315px;
+  width: 320px;
+}
+
+.center-h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-h1 {
+  text-align: center;
+  color: white;
+  letter-spacing: 5px;
+  margin-bottom: 0;
+}
+.custom-h1 span {
+  letter-spacing: 0;
+}
+
+/*
+  TASTEFUL RECIPES SECTION
+*/
+.bread-background {
+  background: black url("https://hollapolla.nl/pexels-valeria-boltneva-842571 (1).jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 500px;
+}
+
+/*
+  MENU SECTION
+*/
+.menu {
+  padding: 30px;
+}
+.menu-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+.menu-images img {
+  width: 100%;
+}
+
+/*
+  THE PERFECT BLEND SECTION
+*/
+.cake-background {
+  background: black url("https://hollapolla.nl/pexels-flo-dahm-541216.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 500px;
+}
+
+/*
+  CULINARY DELIGHT SECTION
+*/
+.reservation-section {
+  margin-bottom: 40px;
+}
+.reservation-section div:first-child {
+  flex: 1;
+}
+.reservation-section div:last-child {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  flex: 1;
+}
+.reservation-section div:last-child img {
+  margin: auto;
+  width: 85%;
+}
+
+/*
+  FOOTER
+*/
+footer {
+  margin: 0;
+  position: relative;
+  background: #4b4b4b;
+  color: lightgray;
+}
+
+.footer_logo {
+
+  margin-right: 3%;
+  margin-top: -1%;
+  width: 15%;
+}
+
+footer button {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  line-height: 1.2;
+  border-radius: 50%;
+  margin-top: 0;
+}
+
+footer h4 {
+  margin-bottom: 10px;
+}
+
+footer h5 {
+  line-height: 1.5;
+}
+
+footer .content_footer {
+  padding: 35px 40px !important;
+  display: flex;
+  flex-direction: column;
+
+}
+
+footer .copyright {
+  background: #232323;
+  color: #969696;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+footer .copyright span {
+  border-bottom: solid 1px;
+}
+
+.location-1 {
+
+  margin-bottom: 23px;
+}
+
+.locations {
+
+  margin-top: 2%;
+}
+
+
+/*
+  MEDIA QUERIES
+*/
+@media screen and (max-width: 425px) {
+  header, .bread-background, .cake-background {
+    background-attachment: scroll;
+  }
+  /* heder */
+
+header {
+  height:800px !important;
+  width: 100%;
+  background: url("https://hollapolla.nl/backgroundMain.webp")880px 25px;
+}
+  /*
+    NAV
+  */
+
+  h2 {
+  
+  margin-top: 3% !important;
+  margin-bottom: 1%;
+}
+
+}
+@media (min-width: 768px) {
+  footer .restaurant-info {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+}
+@media (min-width: 769px) {
+  /*
+    NAV
+  */
+  nav {
+    position: initial !important;
+    align-items: baseline;
+    padding: 20px 70px !important;
+  }
+  nav .nav-button {
+    display: none;
+  }
+  nav div {
+    position: initial !important;
+    background: none !important;
+    opacity: initial !important;
+    transform: initial !important;
+  }
+  nav div ul {
+    position: initial !important;
+    flex-direction: row !important;
+  }
+  nav div ul .exit-menu {
+    display: none;
+  }
+  nav div ul li a {
+    font-size: 12.8px;
+    margin: 0 10px;
+    letter-spacing: 1px;
+    padding: 5px 0 !important;
+  }
+  nav div ul .active {
+    border-bottom: solid 1px lightgray;
+  }
+
+  .add-padding {
+    padding: 50px 0;
+  }
+
+  .add-flex {
+    flex-direction: row;
+    align-items: center;
+  }
+  .add-flex div:first-child {
+    flex: 1;
+    padding: 0 50px;
+  }
+  .add-flex div:last-child {
+    min-width: 400px;
+    margin: 50px;
+  }
+
+  .menu-images {
+    flex: 1;
+  }
+  .menu div:last-child {
+    flex: 1;
+  }
+
+  /*
+    FOOTER
+  */
+  /*
+    FOOTER
+  */
+
+  footer .content_footer {
+    padding: 20px 80px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  footer .content_footer .locations {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  footer .content_footer .locations h4 {
+    flex: 1 0 100%;
+  }
+
+  footer .content_footer .hours {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  footer .content_footer .hours h4 {
+    flex: 1 0 100%;
+  }
+
+  footer .copyright {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+/* ANIMATIONS */
+#asterisk {
+  opacity: 0;
+  transform-origin: 50% 4%;
+  -webkit-animation: spin 0.5s forwards;
+          animation: spin 0.5s forwards;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+#asterisk::before, #asterisk::after {
+  transform-origin: center center;
+  -webkit-animation: grow 0.5s forwards;
+          animation: grow 0.5s forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.center p {
+  transform: translateY(-40px);
+  opacity: 0;
+  -webkit-animation: fadeDown 0.9s forwards;
+          animation: fadeDown 0.9s forwards;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+
+.center h2 {
+  transform: scale(2);
+  opacity: 0;
+  -webkit-animation: fade 0.5s forwards;
+          animation: fade 0.5s forwards;
+}
+
+.center h1 {
+  transform: translateY(40px);
+  opacity: 0;
+  -webkit-animation: fadeUp 0.5s forwards;
+          animation: fadeUp 0.5s forwards;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+@-webkit-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes fade {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes grow {
+  0% {
+    opacity: 0;
+    width: 0%;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    width: 40%;
+  }
+}
+@keyframes grow {
+  0% {
+    opacity: 0;
+    width: 0%;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    width: 40%;
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+.nav_headar{
+  background-color: #26262600;
+  position        : fixed;
+  top             : 0;
+  left            : 0;
+  width           : 100%;
+  display         : flex;
+  justify-content : space-between;
+  align-items     : center;
+  transition      : 0.6s;
+  z-index: 9999;
+  }
+  
+  .nav_headar:hover{
+  background-color: #26262632;
+  
+  }
+  
+  .nav_headar.sticky{
+  background-color: #26262632;
+  backdrop-filter : blur(15px);
+  padding         : 0px 0px;
+  }
+  
+  li{
+  list-style: none;
+  }
+    
+  a{
+  color          : white;
+  text-decoration: none;
+  }
+    
+  .container{
+  width : 90%;
+  margin: auto;
+  
+  }
+  
+  .navbar{
+  min-height     : 70px;
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
+  
+  
+  }
+    
+  .nav-logo{
+  font-size: 2rem;
+  }
+    
+  .nav-menu{
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
+  gap            : 60px;
+  }
+    
+  .nav-link{
+  transition: 0.3s ease-out;
+  }
+    
+  .nav-link:hover{
+  color: rgb(126, 126, 126);
+  }
+    
+  .hamburger{
+  display: none;
+  cursor : pointer;
+  }
+    
+  .bar{
+  display           : block;
+  width             : 25px;
+  height            : 3px;
+  margin            : 5px auto;
+  -webkit-transition: all 0.3s ease;
+  transition        : all 0.3s ease;
+  background-color  : white;
+  
+  }
+    
+  .link:hover{
+  color: rgb(126, 126, 126);
+  }
+    
+  .dropdown.active > .link{
+  color: white;
+  }
+    
+  .dropdown{
+  position: relative;
+  
+  }
+      
+  .dropdown-menu a{
+  color          : black;
+  text-decoration: none;
+  }
+    
+  @media(max-width:900px){
+  
+
+p{
+  font-size: 15px !important;
+}
+  .hamburger{
+  display: block;
+  }
+    
+  .hamburger.active .bar:nth-child(2){
+  opacity: 0;
+  }
+  
+  .hamburger.active .bar:nth-child(1){
+  transform: translateY(8px) rotate(45deg);
+  }
+  
+  .hamburger.active .bar:nth-child(3){
+  transform: translateY(-8px) rotate(-45deg);
+  }
+    
+  .nav-menu{
+      position        : fixed;
+      left            : -100%;
+      top             : 70px;
+      gap             : 0;
+      flex-direction  : column;
+      background-color: #26262632;
+      width           : 100%;
+      text-align      : center;
+      transition      : 0.3s;
+      backdrop-filter : blur(15px) !important; 
+      z-index:999;
+    }
+    
+  .nav-item{
+  margin: 16px 0;
+  
+  }
+    
+  .nav-menu.active{
+  left: 0;
+  }
+  }
+
+  *{
+    padding: 0;
+    margin : 0;
+    z-index: 999;
+    }
+
+    @media(max-width:600px){
+
+      p{
+  font-size: 10px !important;
+}
+      header{
+      height:680px;
+      width: 100%;
+      background: url("https://hollapolla.nl/backgroundMain.webp")900px 0;
+      }
+      header .center h1 {
+        font-family: "Alex Brush", cursive !important;
+        color: #be8040;
+        font-size: 20px;
+        margin-bottom: 24px;
+
+    }
+    header .center h2 {
+      margin-top: 25px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 20px;
+  }
+
+  header .center p {
+    text-transform: uppercase;
+    margin-top: 0px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+header .center #asterisk {
+  margin-top: 20px;
+  color: #be8040;
+  line-height: 0.5;
+  font-size: 20px;
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+    }
+    
+    @media(max-width:450px){
+    p{
+  font-size: 7px !important;
+}
+}
+</style>
+</body>
+</html>
