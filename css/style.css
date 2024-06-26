@@ -1,3 +1,24 @@
+
+body {
+    
+  margin: 0;
+  min-height: 100vh;
+  
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/image/pexels-vincent-rivaud-2543270.jpg");
+  
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  
+  color: #fff;
+  z-index: 94;
+  }
+  
+
+
+
+
 .fa
 {
   
@@ -30,24 +51,19 @@ padding: 0;
 margin: 0;
 }
 
-#languages
-{
-padding: 7px 7px 7px;
-border-radius: 5px;
-border: 2px solid white;
-}
-
 
 /* heder */
 
 header {
-height: 690px;
-width: 100%;
-background: url("/image/backgroundMain.webp") 0px;
-background-size: cover;
-background-attachment: fixed;
-display:flex;
-flex-direction: column;
+
+   height: 550px;
+    max-width: 100%;
+    background: url(/image/backgroundMain.webp) center; 
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+
 /*
   NAV
 */
@@ -174,12 +190,7 @@ transform: scale(1);
 opacity: 1;
 }
 
-/*
-SECTIONS
-*/
-/*
-CLASSES
-*/
+
 .custom-font {
 font-family: "Alex Brush", cursive;
 color: #be8040;
@@ -187,9 +198,7 @@ font-size: 75px;
 line-height: 0;
 }
 
-.add-padding {
-padding: 25px;
-}
+
 
 .center-text {
 text-align: center;
@@ -269,129 +278,52 @@ grid-gap: 10px;
 width: 100%;
 }
 
-/*
-THE PERFECT BLEND SECTION
-*/
-.cake-background {
-background: black url("/image/pexels-flo-dahm-541216.jpg") no-repeat center center;
-background-size: cover;
-background-attachment: fixed;
-height: 500px;
-}
 
-/*
-CULINARY DELIGHT SECTION
-*/
-.reservation-section {
-margin-bottom: 40px;
-}
-.reservation-section div:first-child {
-flex: 1;
-}
-.reservation-section div:last-child {
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: 1fr;
-flex: 1;
-}
-.reservation-section div:last-child img {
-margin: auto;
-width: 85%;
-}
 
-/*
-FOOTER
-*/
-footer {
-margin: 0;
-position: relative;
-background: #4b4b4b;
-color: lightgray;
-}
 
-.footer_logo {
-
-margin-right: 3%;
-margin-top: -1%;
-width: 15%;
-}
-
-footer button {
-width: 50px;
-height: 50px;
-position: absolute;
-top: -20px;
-left: 50%;
-transform: translate(-50%, -10%);
-background: white;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-font-size: 12px;
-font-weight: bold;
-letter-spacing: 1.2px;
-line-height: 1.2;
-border-radius: 50%;
-margin-top: 0;
-}
-
-footer h4 {
-margin-bottom: 10px;
-}
-
-footer h5 {
-line-height: 1.5;
-}
-
-footer .content_footer {
-padding: 35px 40px !important;
-display: flex;
-flex-direction: column;
+.logoHP {
+  top: 0px;
+  left: 1%;
+    max-width: 150px;
+    max-height: 150px;
+    z-index: 99;
 
 }
 
-footer .copyright {
-background: #232323;
-color: #969696;
-font-size: 14px;
-letter-spacing: 1px;
-padding: 10px 30px;
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
-}
 
-footer .copyright span {
-border-bottom: solid 1px;
-}
-
-.location-1 {
-
-margin-bottom: 23px;
-}
-
-.locations {
-
-margin-top: 2%;
-}
 
 
 /*
 MEDIA QUERIES
 */
+
+
+
+.menu
+{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  text-align: center;
+  margin: 20px 0;
+}
+
+
+.menuImage{
+  position: relative;
+  right: 0;
+  width: 50%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
 @media screen and (max-width: 425px) {
 header, .bread-background, .cake-background {
   background-attachment: scroll;
 }
 /* heder */
 
-header {
-height:800px !important;
-width: 100%;
-background: url("/image/backgroundMain.webp")880px 25px;
-}
+
 /*
   NAV
 */
@@ -403,15 +335,8 @@ margin-bottom: 1%;
 }
 
 }
-@media (min-width: 768px) {
-footer .restaurant-info {
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
-}
 
-}
-@media (min-width: 769px) {
+
 /*
   NAV
 */
@@ -470,44 +395,7 @@ nav div ul .active {
   flex: 1;
 }
 
-/*
-  FOOTER
-*/
-/*
-  FOOTER
-*/
 
-footer .content_footer {
-  padding: 20px 80px;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-footer .content_footer .locations {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-footer .content_footer .locations h4 {
-  flex: 1 0 100%;
-}
-
-footer .content_footer .hours {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-footer .content_footer .hours h4 {
-  flex: 1 0 100%;
-}
-
-footer .copyright {
-  flex-direction: row;
-  justify-content: space-around;
-}
-}
 /* ANIMATIONS */
 #asterisk {
 opacity: 0;
@@ -761,7 +649,19 @@ text-decoration: none;
 }
   
 @media(max-width:1200px){
+  .logoHP
+{
 
+
+position: absolute;
+top: 30px;
+
+
+  max-width: 100px;
+  max-height: 100px;
+
+
+}
 
 p{
 font-size: 15px !important;
@@ -817,18 +717,7 @@ left: 0;
     p{
 font-size: 10px !important;
 }
-    header{
-  
-
-    height: 680px;
-width: 100%;
-background: url("/image/backgroundMain.webp") 760px;
-background-size: cover;
-background-attachment: fixed;
-display:flex;
-flex-direction: column;
-    }
-    header .center h1 {
+header .center h1 {
       font-family: "Alex Brush", cursive !important;
       color: #be8040;
       font-size: 20px;
@@ -847,18 +736,10 @@ header .center p {
   margin-top: 0px;
   font-size: 13px;
   font-weight: bold;
-  letter-spacing: 3px;
+
 }
 
-header .center #asterisk {
-margin-top: 20px;
-color: #be8040;
-line-height: 0.5;
-font-size: 20px;
-display: flex;
-margin-bottom: 10px;
-justify-content: center;
-}
+
   }
   
   @media(max-width:450px){
