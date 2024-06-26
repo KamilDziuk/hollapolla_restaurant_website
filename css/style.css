@@ -714,6 +714,11 @@ left: 0;
 
   @media(max-width:600px){
 
+    .menuImage{
+ 
+      width:98%;
+    }
+
     p{
 font-size: 10px !important;
 }
