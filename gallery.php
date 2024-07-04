@@ -1,16 +1,18 @@
+<?php
+require_once 'configFunction.php';
+?>
 <!DOCTYPE html>
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>HollaPolla</title>
+  <title>Gallery</title>
   <script src="js/script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/gallery.css">
   <link rel="icon" type="image/jpg" href="image/browserpictogram.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <script src="script.js" async></script>
-  <link rel="stylesheet" type="text/css" href="style.css"> -->
+
 
 </head>
 <body>
@@ -27,8 +29,8 @@
          <li class="nav-item">
           <a href="menuNL.html" class="nav-link">Menu NL</a>     
    </li>
-      </li>
-      <a href="gallery.html" class="nav-link">Gallery</a> 
+   </li>
+      <a href="gallery.php" class="nav-link">Gallery</a> 
   </li>
 <li class="nav-item">
   <a href="#contact" id="contact" class="nav-link">Contact</a>        
@@ -38,11 +40,6 @@
 <li class="nav-item">
      
 </li>
-<!-- <li class="nav-item">
-     
-
-<a id="languages" class="nav-link">Polish</a>
-</li> -->
 <li class="nav-item">
   
     </li>
@@ -63,19 +60,19 @@
     </div>
    </div>
   </div>
-<header>
-  <div class="center">
-    <h1 id ="welcome" class="alex-brush">Welcome</h1>
-    <h2>Hollapolla</h2>
-    <span id="asterisk">*</span>
- <p id="textHeder">The largest Polish restaurant in the Netherlands</p>
-    <br> 
+<br><br><br><br><br><br><br><br><br><br><br><br>
+ 
+     <?php 
+          $sql = "SELECT * FROM tb_uploadImage ORDER BY id DESC";
+          $res = mysqli_query($conn,  $sql);
 
-  </div>
-</header>
-
-
-
-<section id="contact"></section>
+          if (mysqli_num_rows($res) > 0) {
+          	while ($images = mysqli_fetch_assoc($res)) {  ?>
+             
+             <div class="showImages">
+             	<img src="uploads/<?=$images['image_image']?>">
+             </div>
+          		
+    <?php } }?>
 </body>
 </html>
