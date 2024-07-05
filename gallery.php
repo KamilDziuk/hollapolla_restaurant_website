@@ -70,7 +70,7 @@ require_once 'configFunction.php';
           	while ($images = mysqli_fetch_assoc($res)) {  ?>
              
              <div class="showImages">
-             	<img src="uploads/<?=$images['image_image']?>">
+             <a  target="_blank" href="uploads/<?=$images['image_image']?>"><img src="uploads/<?=$images['image_image']?>"></a>
              </div>
           		
     <?php } }?>
