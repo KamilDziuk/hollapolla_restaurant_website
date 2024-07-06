@@ -33,7 +33,7 @@ require_once 'configFunction.php';
       <a href="gallery.php" class="nav-link">Gallery</a> 
   </li>
 <li class="nav-item">
-  <a href="#contact" id="contact" class="nav-link">Contact</a>        
+  <a href="#contact"class="nav-link">Contact</a>        
 </li>
 </li>
 </li>
@@ -74,5 +74,11 @@ require_once 'configFunction.php';
              </div>
           		
     <?php } }?>
+    <footer>
+  <section id="contact"></section>
+<div class="textLocation"><b>Location</b><br><br>Wilhelminapark 66, 5041 ED Tilburg, Holandia<br></div>
+<div class="textContact"><b>Contact</b><br><br>Email: hollapolla66@gmail.com<br>Phone: + 31 6 58723606<br></div>
+<div class="textInformation"><b>Information</b><br><br>kvk: 92146872<br></div>
+</footer>
 </body>
 </html>
