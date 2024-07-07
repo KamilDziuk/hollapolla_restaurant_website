@@ -14,13 +14,13 @@ require_once 'configFunction.php';
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-</head>
+  </head>
 <body>
   <div class="nav_headar">
       
     <div class="container">
       <nav class="navbar">
-        <a href="/." class="nav-logo"><img    class="logoHP"  src="/image/logoHP.png">  </a>
+        <a href="/." class="nav-logo"><img    class="logoHP"  src="/image/logoHP.png"></a>
         <ul class="nav-menu">
 
            <li class="nav-item">
@@ -29,11 +29,19 @@ require_once 'configFunction.php';
          <li class="nav-item">
           <a href="menuNL.html" class="nav-link">Menu NL</a>     
    </li>
-   </li>
-      <a href="gallery.php" class="nav-link">Gallery</a> 
-  </li>
+
+
 <li class="nav-item">
-  <a href="#contact"class="nav-link">Contact</a>        
+  <a href="#generalImages"  class="nav-link" style="color:#be8040"  > <b>Live style</b></a>        
+</li>
+<li class="nav-item">
+  <a href="#events"  class="nav-link" style="color:#be8040"> <b>Events</b></a>        
+</li>
+<li class="nav-item">
+  <a href="#ourDishes"  class="nav-link" style="color:#be8040"> <b>Our dishes</b></a>        
+</li>
+<li class="nav-item">
+  <a href="#contact"  class="nav-link">Contact</a>        
 </li>
 </li>
 </li>
@@ -61,18 +69,54 @@ require_once 'configFunction.php';
    </div>
   </div>
 <br><br><br><br><br><br><br><br><br><br><br><br>
- 
+
+<div class="headText">See what's going on with us</div>
+<section id="generalImages"></section>
      <?php 
           $sql = "SELECT * FROM tb_uploadImage ORDER BY id DESC";
           $res = mysqli_query($conn,  $sql);
 
           if (mysqli_num_rows($res) > 0) {
           	while ($images = mysqli_fetch_assoc($res)) {  ?>
-             
+              
              <div class="showImages">
-             <a  target="_blank" href="uploads/<?=$images['image_image']?>"><img src="uploads/<?=$images['image_image']?>"></a>
+            <a  target="_blank" href="uploadsGeneral/<?=$images['image_image']?>"><img src="uploadsGeneral/<?=$images['image_image']?>"></a>
              </div>
-          		
+     
+         
+    <?php } }?>
+<div class="headText">Events</div>
+<section id="events"></section>
+    <?php 
+          $sql = "SELECT * FROM tb_uploadImagesParties ORDER BY id DESC";
+          $res = mysqli_query($conn,  $sql);
+
+          if (mysqli_num_rows($res) > 0) {
+          	while ($images = mysqli_fetch_assoc($res)) {  ?>
+              
+        
+         
+             <div class="showImages">
+
+            <a  target="_blank" href="uploadsParties/<?=$images['image_parties']?>"><img src="uploadsParties/<?=$images['image_parties']?>"></a>
+             </div>
+      
+    <?php } }?>
+
+
+    <p></p>
+    <div class="headText">Our dishes</div>
+    <section id="ourDishes"></section>
+    <?php 
+          $sql = "SELECT * FROM tb_uploadImagesFoods ORDER BY id DESC";
+          $res = mysqli_query($conn,  $sql);
+
+          if (mysqli_num_rows($res) > 0) {
+          	while ($images = mysqli_fetch_assoc($res)) {  ?>
+                 
+             <div class="showImages">
+            <a  target="_blank" href="uploadsFood/<?=$images['image_foods']?>"><img src="uploadsFood/<?=$images['image_foods']?>"></a>
+             </div>
     <?php } }?>
     <footer>
   <section id="contact"></section>
@@ -80,5 +124,3 @@ require_once 'configFunction.php';
 <div class="textContact"><b>Contact</b><br><br>Email: hollapolla66@gmail.com<br>Phone: + 31 6 58723606<br></div>
 <div class="textInformation"><b>Information</b><br><br>kvk: 92146872<br></div>
 </footer>
-</body>
-</html>

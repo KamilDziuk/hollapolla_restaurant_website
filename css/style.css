@@ -1,4 +1,3 @@
-
 body {
     
   margin: 0;
@@ -647,7 +646,6 @@ position: relative;
 color          : black;
 text-decoration: none;
 }
-  
 
 footer
 {
@@ -656,19 +654,20 @@ display: flex;
 bottom: 0;
 background-color: #26262632;
 backdrop-filter : blur(15px);
-height: 100px;
+height: 130px;
 
 }
 
 .textContact,.textLocation, .textInformation
 {
-  position: relative;
-  margin-left:  1.5%;
-  margin-right: 1.5%;
-  margin-top: 2%;
-  left: 26%;
+position: relative;
+margin-left:  1.5%;
+margin-right: 1.5%;
+margin-top: 2%;
+left: 26%;
 
 }
+  
 @media(max-width:1200px){
   .logoHP
 {
@@ -732,35 +731,32 @@ left: 0;
   margin : 0;
   z-index: 999;
   }
-
-  
   @media(max-width:800px){
 
 
 
-    footer
-    {
-    position: relative;
-    display:block;
-    bottom: 0;
-    background-color: #26262632;
-    backdrop-filter : blur(15px);
-    height: 230px;
-    
-    }
-    
-       .textContact,.textLocation, .textInformation
-    {
-     position: relative;
-     margin-left:  1.5%;
-     margin-right: 1.5%;
-     margin-top: 2%;
-     
-     left:0%;
-    
-    }
-  }
+footer
+{
+position: relative;
+display:block;
+bottom: 0;
+background-color: #26262632;
+backdrop-filter : blur(15px);
+height: 230px;
 
+}
+
+ .textContact,.textLocation, .textInformation
+{
+position: relative;
+margin-left:  1.5%;
+margin-right: 1.5%;
+margin-top: 2%;
+
+left:0%;
+
+}
+ }
   @media(max-width:600px){
 
     .menuImage{
