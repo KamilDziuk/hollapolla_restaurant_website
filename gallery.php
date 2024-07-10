@@ -8,13 +8,11 @@ require_once 'configFunction.php';
   <title>Gallery</title>
   <script src="js/script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/gallery.css">
   <link rel="icon" type="image/jpg" href="image/browserpictogram.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  </head>
+</head>
 <body>
   <div class="nav_headar">
       
@@ -124,3 +122,7 @@ require_once 'configFunction.php';
 <div class="textContact"><b>Contact</b><br><br>Email: hollapolla66@gmail.com<br>Phone: + 31 6 58723606<br></div>
 <div class="textInformation"><b>Information</b><br><br>kvk: 92146872<br></div>
 </footer>
+
+</body>
+
+</html>
