@@ -1,5 +1,5 @@
 <?php
-require_once 'config/config.php';
+require_once 'config/configPhotosDB.php';
 $servername = $config['servername'];
 $username = $config['username'];
 $password = $config['password'];

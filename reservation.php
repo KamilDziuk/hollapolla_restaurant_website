@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>menu NL</title>
+  <title>Reservation</title>
   <script src="js/script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
@@ -29,11 +29,12 @@
   <a href="gallery.php" class="nav-link">Gallery</a> 
 </li>
 <li class="nav-item">
-  <a href="#contact"class="nav-link">Contact</a>        
-</li>
-<li class="nav-item">
     <a href="reservation.php" class="nav-link" id="openReservation"   style="color:#be8040"    >Reservation</a>        
   </li>
+<li class="nav-item">
+  <a href="#contact"class="nav-link">Contact</a>        
+</li>
+
 </li>
 </li>
 <li class="nav-item">
@@ -61,18 +62,27 @@
   </div>
 
 
-<img id="imageReservation" src="image/(niderlandzki) (angielski) (3)_20240607_120140_0002.png">
+<img id="imageReservation" src="image/mapTable.jpg">
 <form method="post" action="">
+
+
+<label form="name">Name</label>
+<input type="text" id="name" >
+
+<label form="phone">Phone</label>
+<input type="number" id="phone" >
+
+
 <label form="table_number">Number table</label >
-<input type="number" id="table_number" name="table_number" >
+<input type="number" id="table_number" name="table_number">
 
 <label form="reservation_date">Date</label>
-<input type="date" id="reservation_date" name="reservation_date" >
+<input type="date" id="reservation_date" name="reservation_date">
 
 <label form="reservation_time">Time</label>
-<input type="time" id="reservation_time" name="reservation_time" >
+<input type="time" id="reservation_time" name="reservation_time">
 
-<button type="submit" id="submit" value="Submit"></button>
+<input type="submit" id="submit" value="Submit">
 
 </form>
 <div class="textStatus"></div>
@@ -93,9 +103,11 @@
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <!-- email  connect end -->
 
+
+
 <?php
 // Include the configuration file which likely contains database connection settings and functions
-require_once'configFunction.php';
+require_once'configFunctionR.php';
 
 // Check if the request method is POST, which means the form has been submitted
 if($_SERVER['REQUEST_METHOD'] == "POST")
