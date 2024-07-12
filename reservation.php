@@ -62,8 +62,8 @@
   </div>
 
 
-<img id="imageReservation" src="image/mapTable.jpg">
-<form method="post" action="">
+ <a href="image/mapTable.jpg"  target="_blank"  ><img id="imageReservation" src="image/mapTable.jpg"></a> 
+<form method="post" action="" onsubmit="return false">
 
 
 <label form="name">Name</label>
@@ -83,9 +83,9 @@
 <input type="time" id="reservation_time" name="reservation_time">
 
 <input type="submit" id="submit" value="Submit">
-
-</form>
 <div class="textStatus"></div>
+</form>
+
 
 <footer>
   <section id="contact"></section>
@@ -102,6 +102,7 @@
 <!-- email  connect start -->
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <!-- email  connect end -->
+
 
 
 
@@ -136,7 +137,15 @@ if($result -> num_rows >0)
 
 
 {
-echo "This number table is exists";
+
+  print '<script>
+  
+    
+  
+     textStatus.innerHTML = "This date is already booked";
+     textStatus.style.color = "red";
+  
+  </script>';
 }
 else
 {
@@ -156,25 +165,3 @@ else
 // Close the database connection
 $conn -> close();
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
-</html>
