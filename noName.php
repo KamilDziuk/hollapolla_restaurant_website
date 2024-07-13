@@ -7,7 +7,7 @@
   <title>Adding an image</title>
   <script src="js/script.js" defer></script>
 
-  <!-- <link rel="stylesheet" type="text/css" href="css/addImages.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/noName.css">
   <link rel="icon" type="image/jpg" href="image/browserpictogram.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 

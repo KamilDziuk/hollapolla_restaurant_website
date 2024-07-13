@@ -9,6 +9,7 @@ require_once 'configFunction.php';
   <script src="js/script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" type="image/jpg" href="image/browserpictogram.jpg">
+  <link rel="stylesheet" type="text/css" href="css/gallery.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
