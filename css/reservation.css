@@ -226,7 +226,7 @@ border-bottom: solid 2px #be8040;
 }
 
 .add-flex {
-display: flex;
+display:  flex;
 flex-direction: column;
 align-items: center;
 }
