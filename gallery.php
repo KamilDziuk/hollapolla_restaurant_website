@@ -6,7 +6,7 @@ require_once 'configFunction.php';
 <head>
   <meta charset="UTF-8">
   <title>Gallery</title>
-  <script src="js/script.js" defer></script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" type="image/jpg" href="image/browserpictogram.jpg">
   <link rel="stylesheet" type="text/css" href="css/gallery.css">
@@ -40,13 +40,16 @@ require_once 'configFunction.php';
   <a href="#ourDishes"  class="nav-link" style="color:#be8040"> <b>Our dishes</b></a>        
 </li>
 <li class="nav-item">
-  <a href="#contact"  class="nav-link">Contact</a>        
-</li>
+          <a href="reservation.html" class="nav-link" id="openReservation" style="color:#be8040">Reservation</a>
+        </li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </li>
 </li>
 </li>
 <li class="nav-item">
      
 </li>
+
 <li class="nav-item">
   
     </li>
@@ -123,7 +126,7 @@ require_once 'configFunction.php';
 <div class="textContact"><b>Contact</b><br><br>Email: hollapolla66@gmail.com<br>Phone: + 31 6 58723606<br></div>
 <div class="textInformation"><b>Information</b><br><br>kvk: 92146872<br></div>
 </footer>
-
+<script src="js/script.js"></script>
 </body>
 
 </html>

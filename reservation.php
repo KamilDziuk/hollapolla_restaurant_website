@@ -1,45 +1,37 @@
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
   <title>Reservation</title>
-  <script src="js/script.js" defer></script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/reservation.css">
   <link rel="icon" type="image/jpg" href="image/browserpictogram.jpg">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
 </head>
+
 <body>
-  <div class="nav_headar">
-      
-    <div class="container">
-      <nav class="navbar">
-        <a href="/." class="nav-logo"><img    class="logoHP"  src="/image/logoHP.png">  </a>
-        <ul class="nav-menu">
-
-           <li class="nav-item">
-                <a href="/." class="nav-link">Menu PL</a>     
-         </li>
-         <li class="nav-item">
-          <a href="menuNL.html" class="nav-link">Menu NL</a>     
-   </li>
-   <li class="nav-item">
-  <a href="gallery.php" class="nav-link">Gallery</a> 
-</li>
-<li class="nav-item">
-    <a href="reservation.php" class="nav-link" id="openReservation"   style="color:#be8040"    >Reservation</a>        
-  </li>
-<li class="nav-item">
-  <a href="#contact"class="nav-link">Contact</a>        
-</li>
-
+<div class="nav_headar">
+  <div class="container">
+    <nav class="navbar">
+      <a href="/." class="nav-logo"><img class="logoHP" src="/image/logoHP.png"></a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="/." class="nav-link">Menu PL</a></li>
+        <li class="nav-item"><a href="menuNL.html" class="nav-link">Menu NL</a></li>
+        <li class="nav-item"><a href="gallery.php" class="nav-link">Gallery</a></li>
+        <li class="nav-item">
+          <a href="reservation.html" class="nav-link" id="openReservation" style="color:#be8040">Reservation</a>
+        </li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </li>
 </li>
 </li>
 <li class="nav-item">
      
 </li>
+
 <li class="nav-item">
   
     </li>
@@ -51,226 +43,55 @@
 
 
         </ul>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </nav>
-    </div>
-   </div>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
   </div>
+</div>
 
+<a href="image/mapTable.jpg" target="_blank"><img id="imageReservation" src="image/mapTable.jpg"></a>
 
- <a href="image/mapTable.jpg"  target="_blank"  ><img id="imageReservation" src="image/mapTable.jpg"></a> 
-<form method="post" action="">
+<form id="reservationForm">
+<br>  <br>
+  <input type="text" id="name" name="name" placeholder=" Last name">
 
+  <br>
+  <input type="number" id="phone" name="phone" placeholder=" Phone">
+  <br>
 
-<label form="name">Name</label>
-<input type="text" id="name" >
+  <input type="number" id="table_number" name="table_number" placeholder=" Number table">
 
-<label form="phone">Phone</label>
-<input type="number" id="phone" >
+  <br>
+  <input type="number" id="number_of_guests" name="number_of_guests" placeholder=" Number of guests">
+  <br>
+ 
+  <input type="date" id="reservation_date" name="reservation_date" placeholder=" Date">
 
+  <br>
+  <input type="time" id="reservation_time" name="reservation_time" placeholder=" Time">
 
-<label form="table_number">Number table</label >
-<input type="number" id="table_number" name="table_number">
+<br>
+<textarea    rows="4" cols="50"  id="message" name="message" placeholder=" Message"></textarea>
 
-<label form="reservation_date">Date</label>
-<input type="date" id="reservation_date" name="reservation_date">
-
-<label form="reservation_time">Time</label>
-<input type="time" id="reservation_time" name="reservation_time">
-
-<input type="submit" id="submit" value="Submit">
-<div class="textStatus"></div>
+  <input type="submit" id="submit" value=" Submit">
+  <div class="textStatus"></div>
 </form>
-
 
 <footer>
   <section id="contact"></section>
-<div class="textLocation"><b>Lokalizacja</b><br><br>Wilhelminapark 66, 5041 ED Tilburg, Holandia<br></div>
-<div class="textContact"><b>Kontakt</b><br><br>Email: hollapolla66@gmail.com<br>Phone: + 31 6 58723606<br></div>
-<div class="textInformation"><b>Informacije</b><br><br>kvk: 92146872<br></div>
+  <div class="textLocation"><b>Lokalizacja</b><br><br>Wilhelminapark 66, 5041 ED Tilburg, Holandia<br></div>
+  <div class="textContact"><b>Kontakt</b><br><br>Email: hollapolla66@gmail.com<br>Phone: + 31 6 58723606<br></div>
+  <div class="textInformation"><b>Informacije</b><br><br>kvk: 92146872<br></div>
 </footer>
 
 
-
-
-
-<script src="js/reservation.js" async></script>
 <!-- email  connect start -->
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <!-- email  connect end -->
-
-
-<script>
-  
-  const  textStatus = document.querySelector('.textStatus');
-
-
-
-
-document.querySelector('#submit').addEventListener("click", function(e)
-{
-const  table_number = document.querySelector('#table_number').value;
-const  reservation_date = document.querySelector('#reservation_date').value;
-const  reservation_time = document.querySelector('#reservation_time').value;
-const  name = document.querySelector('#name').value;
-const  phone = document.querySelector('#phone').value;
-
-
-
-if(!table_number && !reservation_date && !reservation_time && !name && !phone)
-{
-e.preventDefault();
-textStatus.innerHTML = "The fields cannot be empty";
-textStatus.style.color = "red";
-
-}
-
-else if(!name)
-   {
-       e.preventDefault();
-       textStatus.innerHTML = "Name field cannot be empty";
-       textStatus.style.color = "red";
-   }
-
-
-   else if(!phone)
-       {
-           e.preventDefault();
-           textStatus.innerHTML = "Phone field cannot be empty";
-           textStatus.style.color = "red";
-       }
-
-
-
-else if(!table_number )
-{
-e.preventDefault();
-textStatus.innerHTML = "The reservation numbe field cannot be empty";
-textStatus.style.color = "red";
-}
-else if(!reservation_date)
-{
-e.preventDefault();
-textStatus.innerHTML = "The reservation date field cannot be empty";
-textStatus.style.color = "red";
-}
-else if(!reservation_time)
-{
-   e.preventDefault();
-   textStatus.innerHTML = "The reservation time field cannot be empty";
-   textStatus.style.color = "red";
-}
-
-else
-{
-
- 
-   Email.send({
-   SecureToken : '',
-   To : '',
-   From : '',
-   Subject : `Rezerwacja stolika`,
-   Body :`
-   
-   Rezerwacja stolika number ${table_number}  <br><br>  
-
-   Imie: ${name}<br><br>
-   Telefon: ${phone}<br><br> 
-   Data: ${reservation_date}<br><br>
-   Godzina: ${reservation_time}<br><br> 
-   Stolik: ${table_number} <br><br>
-   `
-}).then( message => 
-{
-if(message === "OK")
-
-{
-  
-  textStatus.style.color = "green";
-  
-  textStatus.innerHTML = "Rezerwation in send";
-}
-else
-
-{
- 
-
-
-
-  textStatus.innerHTML = "<br><br>Failed to send the message.<br> This may be due to too many messages being sent at once.<br> Please send the message by email hollapolla66@gmail.com";
-  textStatus.style.color = "red";
-}
-})
-}
-
-
- 
- 
-
-});
-</script>
-
-<?php
-// Include the configuration file which likely contains database connection settings and functions
-require_once'configFunctionR.php';
-
-// Check if the request method is POST, which means the form has been submitted
-if($_SERVER['REQUEST_METHOD'] == "POST")
-
-{
-  // Get the table number, reservation date, and reservation time from the submitted form
-    $_table_number = $_POST['table_number'];
-    $_reservation_date  = $_POST['reservation_date'];
-    $_reservation_time = $_POST['reservation_time'];
-
-    // Prepare an SQL statement to select any reservations that match the submitted table number, date, and time
-    $sql = "SELECT * FROM reservations WHERE  table_number =? AND  reservation_date =? AND  reservation_time =? ";
-$main = $conn -> prepare( $sql);
-
-    // Bind the parameters to the SQL query: table number as an integer, and reservation date and time as strings
-$main -> bind_param("iss",  $_table_number,   $_reservation_date, $_reservation_time );
-
-    // Execute the SQL query
-$main -> execute();
-
-// Get the result of the query
-$result = $main ->get_result();
-
-    // Check if there are any rows in the result, meaning a reservation already exists for the specified table, date, and time
-if($result -> num_rows >0)
-
-
-{
-
-  print '<script>
-  
-    
-  
-     textStatus.innerHTML = "This date is already booked";
-     textStatus.style.color = "red";
-  
-  </script>';
-}
-else
-{
-    // Prepare an SQL statement to insert a new reservation into the database
-    $sql = "INSERT INTO  reservations (table_number, reservation_date, reservation_time, status ) VALUE (?, ?, ?, 'booked')";   
-
-    $main = $conn -> prepare( $sql);
-
-
-    $main -> bind_param("iss",  $_table_number,   $_reservation_date, $_reservation_time );
-    
-    $main -> execute();
-
-}
-
-}
-// Close the database connection
-$conn -> close();
-?>
-
+<script src="js/reservation.js" defer></script>
+<script src="js/script.js" defer></script>
+</body>
+</html>
