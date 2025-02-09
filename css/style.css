@@ -3,7 +3,7 @@ body {
     margin: 0;
     min-height: 100vh;
     
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/image/background.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../image/background.webp");
     
     background-size: cover;
     background-position: center;
@@ -57,7 +57,7 @@ body {
   
      height: 550px;
       max-width: 100%;
-      background: url(/image/backgroundMain.webp) center; 
+      background: url(../image/backgroundMain.webp) center; 
       background-size: cover;
       background-attachment: fixed;
       display: flex;
@@ -230,7 +230,7 @@ body {
   align-items: center;
   }
   .add-flex .stuffed-cherries {
-  background: url("/image/browserpictogram.webp") no-repeat center center;
+  background: url("image/browserpictogram.webp") no-repeat center center;
   background-size: cover;
   height: 315px;
   width: 320px;
@@ -256,7 +256,7 @@ body {
   TASTEFUL RECIPES SECTION
   */
   .bread-background {
-  background: black url("/image/pexels-valeria-boltneva-842571 (1).jpg") no-repeat center center;
+  background: black url("image/pexels-valeria-boltneva-842571 (1).jpg") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   height: 500px;
