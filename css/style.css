@@ -282,6 +282,7 @@ body {
   
   .logoHP {
     top: 0px;
+    margin-top: -10px;
     left: 1%;
       max-width: 150px;
       max-height: 150px;
@@ -674,9 +675,9 @@ height: 130px;
     .logoHP
   {
   
-  
+  margin-left: 5%;
   position: absolute;
-  top: 30px;
+  top: 35px;
   
   
     max-width: 100px;
