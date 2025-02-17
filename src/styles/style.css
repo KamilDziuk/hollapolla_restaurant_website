@@ -3,7 +3,7 @@ body {
     margin: 0;
     min-height: 100vh;
     
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../image/background.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../public/assets/images/background.webp");
     
     background-size: cover;
     background-position: center;
@@ -57,7 +57,7 @@ body {
   
      height: 550px;
       max-width: 100%;
-      background: url(../image/backgroundMain.webp) center; 
+      background: url(../public/assets/images/backgroundMain.webp) center; 
       background-size: cover;
       background-attachment: fixed;
       display: flex;
