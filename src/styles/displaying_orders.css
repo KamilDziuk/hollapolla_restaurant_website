@@ -1,0 +1,34 @@
+body {
+    margin:0;
+    background-image:linear-gradient(#0009,#0009),url(../public/assets/images/background-image-displaying_orders.webp);
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    z-index:94
+    }
+    
+    #printOrdersBox {
+    display:flex;
+    position:relative
+    }
+    
+    #printOrders {
+    padding:1%;
+    font-size:25px;
+    background-color:#2424246a;
+    color:#fff;
+    z-index:95
+    }
+    
+    @media(max-width:400px) {
+    #printOrders {
+    font-size:17px
+    }
+    }
+    
+    @media(max-width:250px) {
+    #printOrders {
+    font-size:17px
+    }
+    }
