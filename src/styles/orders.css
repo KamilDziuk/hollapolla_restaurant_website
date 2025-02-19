@@ -23,7 +23,8 @@ color:  #be7f40;
 
   .pricStyle
   {
-   margin-left: 10%;
+    position: absolute ;
+   margin-left: 85%;
  font-weight: 900;
  font-size: 25px;
  
@@ -111,8 +112,8 @@ padding:0% 3% 0 5%
   transform:translateX(-50%);
   left:50%;
   position:relative;
-  display:flex;
-  width:65%
+
+  width:100%
   }
   
   header nav {
@@ -677,7 +678,14 @@ padding:0% 3% 0 5%
   margin:0;
   z-index:960
   }
-  
+
+  @media(max-width:1100px) {
+ .pricStyle
+  {
+  position: relative ;
+  margin-left: 10%;
+  } 
+  }
   @media(max-width:950px) {
   .information {
   position:relative;
@@ -815,4 +823,25 @@ font-size: 9px;
   font-size:12px!important;
   z-index:9999
   }
+
+  .position 
+  {
+    font-size: 15px;
+
+  }
+
+  .pricStyle
+  {
+ font-size: 15px;
+ margin-left: 2%;
+  }
+  .info_about_dish
+  {
+font-size: 15px;
+
+  }
+
+
+
+
   }
