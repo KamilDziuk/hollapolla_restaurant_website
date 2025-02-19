@@ -234,116 +234,7 @@ body {
   z-index:2
   }
   
-  #imageOrders0 {
-  position:absolute;
-  width:100%!important;
-  height:auto;
-  z-index:2
-  }
-  
-  #imageOrders1 {
-  position:absolute;
-  margin-top:145%;
-  width:100%!important;
-  height:auto;
-  z-index:2
-  }
-  
-  #imageOrders2 {
-  position:absolute;
-  margin-top:290%;
-  width:100%!important;
-  height:auto;
-  z-index:2
-  }
-  
-  #imageOrders3 {
-  position:absolute;
-  margin-top:435%;
-  width:100%!important;
-  height:auto;
-  z-index:2
-  }
-  
-  #imageOrders4 {
-  position:absolute;
-  margin-top:580%;
-  width:100%!important;
-  height:auto;
-  z-index:2
-  }
-  
-  #imageOrders5 {
-  position:absolute;
-  margin-top:725%;
-  width:100%!important;
-  height:auto;
-  z-index:2
-  }
-  
-  #imageOrders6 {
-  position:absolute;
-  margin-top:870%;
-  width:100%!important;
-  height:auto;
-  z-index:2
-  }
-  
-  #imageOrders7 {
-  position:absolute;
-  margin-top:1015%;
-  width:100%!important;
-  height:auto;
-  z-index:2
-  }
-  
-  #imageOrdersSvg0 {
-  position:absolute;
-  width:100%!important;
-  height:auto;
-  z-index:3
-  }
-  
-  #imageOrdersSvg1 {
-  position:absolute;
-  margin-top:145%;
-  width:100%!important;
-  height:auto;
-  z-index:3
-  }
-  
-  #imageOrdersSvg2 {
-  position:absolute;
-  margin-top:290%;
-  width:100%!important;
-  height:auto;
-  z-index:3
-  }
-  
-  #imageOrdersSvg3 {
-  position:absolute;
-  margin-top:435%;
-  width:100%!important;
-  height:auto;
-  z-index:3
-  }
-  
-  #imageOrdersSvg4 {
-  position:absolute;
-  margin-top:580%;
-  width:100%!important;
-  height:auto;
-  z-index:3
-  }
-  
-  #imageOrdersSvg5 {
-  position:absolute;
-  margin-top:725%;
-  width:100%!important;
-  height:auto;
-  z-index:3
-  }
-  
+
   #ordersForm {
   position:absolute;
   background-color:#26262632;
@@ -354,28 +245,6 @@ body {
   width:350px;
   margin-top:7%;
   z-index:22!important
-  }
-  
-  svg path {
-  fill:#fff0;
-  animation:pulse 3s infinite;
-  border-radius:20%
-  }
-  
-  svg path:hover {
-  fill:#ffffff3b;
-  filter:drop-shadow(2px 2px 5px #ffc400)
-  }
-  
-  @keyframes pulse {
-  0% {
-  fill:#fff0
-  }
-  
-  100% {
-  fill:#ffffff3b;
-  filter:drop-shadow(2px 2px 5px #fff)
-  }
   }
   
   input {
@@ -830,15 +699,7 @@ body {
   margin-bottom:1%;
   font-style:12px
   }
-  
-  footer {
-  position:relative;
-  display:block;
-  bottom:0;
-  background-color:#26262632;
-  backdrop-filter:blur(15px);
-  height:230px
-  }
+
   
   .textContact,.textLocation,.textInformation {
   position:relative;
