@@ -8,7 +8,42 @@ body {
   color:#fff;
   z-index:94
   }
-  
+  .position 
+  {
+    font-size: 25px;
+    display: flex;
+    text-align:left;
+    padding:2% 2% 0 5%
+  }
+
+  .position:hover
+  { 
+color:  #be7f40;
+  }
+
+  .pricStyle
+  {
+   margin-left: 10%;
+ font-weight: 900;
+ font-size: 25px;
+ 
+  }
+
+
+  .info_about_dish
+  {
+font-size: 15px;
+text-align:left;
+padding:0% 3% 0 5%
+  }
+
+
+  h3{
+    text-align:left;
+    padding:5% 0% 0 5%;
+
+    font-size: 30px;
+  }
   .orderSummaryBackground {
   position:fixed;
   top:0;
@@ -229,7 +264,7 @@ body {
   margin-top:10%;
   margin-bottom:0;
   transform:translateX(-50%);
-  width:30%!important;
+  width:45%!important;
   height:100%;
   z-index:2
   }
@@ -528,7 +563,8 @@ body {
   position:relative;
   font-size:17px;
   text-align:left;
-  padding:1% 2% 0 5%
+  padding:1% 2% 5% 5%
+  
   }
   
   .containerCheck {
@@ -672,8 +708,8 @@ body {
   left:50%;
   transform:translateX(-50%);
   margin-bottom:0;
-  width:250px;
-  margin-top:35%
+  width:60%;
+  margin-top:15%
   }
   
   input,textarea {
@@ -708,6 +744,29 @@ body {
   margin-top:2%;
   left:0
   }
+
+
+  .position 
+  {
+    font-size: 18px;
+
+  }
+
+  .pricStyle
+  {
+ font-size: 18px;
+ 
+  }
+  .info_about_dish
+  {
+font-size: 15px;
+
+  }
+  h3
+  {
+    font-size:20px;
+  }
+
   }
   
   @media(max-width:600px) {
@@ -726,6 +785,12 @@ body {
   .textStatus {
   margin-top:16%
   }
+
+  #ordersForm {
+    margin-top:20%;
+
+  }
+  
   }
   
   @media(max-width:450px) {
@@ -738,6 +803,7 @@ body {
 font-size: 9px;
     }
 #ordersForm {
+  margin-top:35%;
   width: 98% !important;
 }
 
