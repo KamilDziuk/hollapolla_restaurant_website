@@ -99,7 +99,7 @@
     <div class="boxOrderInfo">
       
     <div class="numbersOrderLocation">Numbers order</div>
-    <div class="quantityLocation">Quantity</div>
+  
     
   </div>
   </div>
