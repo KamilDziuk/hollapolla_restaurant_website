@@ -1,25 +1,15 @@
+// global objects
 let contenerOrderInfo = document.querySelector("#contenerOrderInfo");
 let orderSummaryBackground = document.querySelector(".orderSummaryBackground");
 let codeNumber = document.querySelector(".codeNumber");
 let position = document.querySelectorAll('.position');
-
-let positionClickSttus = false;
-
-
-
-
-
-
-
-
 let displayInfo = document.querySelector('.display');
-
-let orderCodeValue;
-const textStatus = document.querySelector('.textStatus');
-
+let textStatus = document.querySelector('.textStatus');
+let sum = document.querySelector('.sum');
+let submit = document.querySelector("#submit");
+submit.style.display = "none";
 contenerOrderInfo.style.display = "none";
 orderSummaryBackground.style.display = "none";
-
 
 
 
