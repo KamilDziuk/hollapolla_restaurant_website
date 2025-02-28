@@ -13,7 +13,9 @@ orderSummaryBackground.style.display = "none";
 
 let OrderSystem = function(pric)
 {
+position.addEventListener("click", () => {
 
+})
 
 
 };
