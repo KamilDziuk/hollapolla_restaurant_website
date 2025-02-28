@@ -151,6 +151,72 @@ subtractElement.addEventListener('click', () => {
   
   subtractButton();
 
+  
+let addBoxOrders = () => {
+
+  //create add boxOrders element
+  let boxOrdersElement = document.createElement('div');
+  boxOrdersElement.style =" position: relative; display: flex; width:100%; ";
+  boxOrdersElement.className =`box_orders_${id_orders}`;
+  document.querySelector('.boxOrders').appendChild(boxOrdersElement);
+  };
+  
+  addBoxOrders();
+    
+  // add value pric to sum element before click
+  this.pric >= 0  ? sum.innerText  =  this.pric +=  parseInt( position.value)  : sum.innerText  = 0 ;
+  
+  // add value to element add_pric_${id_orders} before click
+  if (document.querySelector(`#add_pric_${id_orders}`)) deleteValue += parseInt( document.querySelector(`#add_pric_${id_orders}`).value);
+  
+  // getting the current date
+  let date = new Date();
+  let currentDateResult =  date.getFullYear() + "-" +
+  ("0" + (date.getMonth() + 1)).slice(-2) + "-" + ("0" + date.getDate()).slice(-2) ;
+   function addZero(i) {
+   if (i < 10) {i = "0" + i}
+  return i;
+  }
+  
+  let h = addZero(date.getHours());
+  let m = addZero(date.getMinutes());
+  let s = addZero(date.getSeconds());
+  let fullTime = h + ":" + m + ":" + s;
+  let order_date = currentDateResult;
+  let order_time = fullTime;
+  
+  // order confirmation values
+  let  orderConfirmation = () => {
+  
+  // generating an order code
+  
+  // order value counter, if it is equal to 0 the change will be deleted
+  this.orderCodeValue = Math.floor(Math.random() * 100);
+  // generating an order code
+  
+  //after clicking, a popup with the values ​​from the form is displayed
+  submit.addEventListener('click',   async() => {
+  orderSummaryBackground.style.display = "block";
+  let first_name = document.querySelector("#first_name").value;
+  let email = document.querySelector("#email").value;
+  let addres = document.querySelector("#addres").value;
+  let message = document.querySelector("#message").value;  
+  
+  // information about order acceptance
+  textStatus.innerHTML = `
+  <img class="logoHPPopup" src="../public/assets/images/logoHP.webp"><br>
+  <div style="color:#009e20 ; font-size:20px; font-weight: 800;">Dziękujemy! Twoje zamówienie zostało przyjęte</div><div style=" font-size:20px; font-weight: 800;"> Kod zamówienia:
+  ${ this.orderCodeValue}</div>
+  Imię: ${first_name}<br>
+  E-mail: ${email}<br>
+  Adres: ${addres}<br>
+  Wiadomość: ${message}<br>
+  Data: ${currentDateResult}<br>
+  Godzina: ${fullTime}<br>
+  <div style=" font-size:20px; font-weight: 800;">Suma: € ${this.pric}</div>`;
+  postOrders(first_name, email, addres, message );
+  
+  });
 
 
 
