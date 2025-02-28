@@ -2,124 +2,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>HollaPolla - Reservations</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="../styles/reservation.css">
-  <link rel="icon" type="image/png" href="assets/images/browserpictogram.png">
-  <link rel="apple-touch-icon" href="assets/images/icon-96x96.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="assets/images/icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="167x167" href="assets/images/icon-167x167.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icon-180x180.png">
-  <link rel="manifest" href="manifest.json">
-  
-  
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>HollaPolla - Reservations</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../styles/reservation.css">
+<link rel="stylesheet" type="text/css" href="../styles/style.css">
+<link rel="icon" type="image/png" href="assets/images/browserpictogram.png">
+<link rel="apple-touch-icon" href="assets/images/icon-96x96.png">
+<link rel="apple-touch-icon" sizes="152x152" href="assets/images/icon-152x152.png">
+<link rel="apple-touch-icon" sizes="167x167" href="assets/images/icon-167x167.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/icon-180x180.png">
+<link rel="manifest" href="manifest.json">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
 <body>
-    <!-- gtranslate start -->
-    <div class="gtranslate_wrapper"></div>
-    <script>window.gtranslateSettings = {"default_language":"en","native_language_names":true,"detect_browser_language":true,"languages":["en","pl","nl","fr"],"wrapper_selector":".gtranslate_wrapper","switcher_horizontal_position":"right","float_switcher_open_direction":"right"}</script>
-    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
-    
-      <!-- gtranslate start  end-->
+<!-- gtranslate start -->
+<div class="gtranslate_wrapper"></div>
+<script>window.gtranslateSettings = {"default_language":"en","native_language_names":true,"detect_browser_language":true,"languages":["en","pl","nl","fr"],"wrapper_selector":".gtranslate_wrapper","switcher_horizontal_position":"right","float_switcher_open_direction":"right"}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+   
+
 <div class="nav_headar">
-  <div class="container">
-    <nav class="navbar">
-      <a href="https://hollapolla.nl/" class="nav-logo"><img    class="logoHP"  src="assets/images/logoHP.webp">  </a>
-      <ul class="nav-menu">
+<div class="container">
 
-         <li class="nav-item">
-              <a href="https://hollapolla.nl/" class="nav-link">Menu</a>     
-       </li>
+<nav class="navbar">
+<a href="https://hollapolla.nl/" class="nav-logo"><img    class="logoHP"  src="assets/images/logoHP.webp">  </a>
+<ul class="nav-menu">
 
 <li class="nav-item">
-  <a href="reservations" class="nav-link" id="openReservations"   style="color:#be8040"    >Table reservation </a>        
-</li>
-<li class="nav-item">
-     
-  <a href="orders.php" class="nav-link" id="openReservations"   style="color:#f4d135"    >Online ordering</a>        
-
-  </li>
-
-</li>
-<li class="nav-item">
-  <a style="color:#cdcdcd"   onclick="window.location.href='tel:+31 6 58723606'">+31 6 58723606</a>
-
+<a  href="https://hollapolla.nl/"  class="nav-link" >Menu</a>     
 </li>
 
 <li class="nav-item">
-  
-    </li>
-    <li class="nav-item">
-  <a href="https://www.facebook.com/profile.php?id=61555700734528 " class="fa fa-facebook"></a>
-  <a href="https://www.instagram.com/hollapolla66/?utm_source=qr&igsh=MXFzdG11cWE0OXhvNg%3D%3D" class="fa fa-instagram"></a>
-  </li>
+<a href="reservation.html" class="nav-link" id="openReservation"   style="color:#be8040" >Rezerwacjie stolika</a>        
+</li>
 
+<li class="nav-item">
+<a class="nav-link" > hollapolla66@gmail.com</a>        
+</li>
 
+<li class="nav-item">
+<a class="nav-link">  + 31 6 58723606</a>        
+</li>
 
-        </ul>
-        
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-        
-      </div>
-    </nav>
-  </div>
+<li class="nav-item">
+<a href="https://www.facebook.com/profile.php?id=61555700734528 " class="fa fa-facebook"></a>
+<a href="https://www.instagram.com/hollapolla66/?utm_source=qr&igsh=MXFzdG11cWE0OXhvNg%3D%3D" class="fa fa-instagram"></a>
+</li>
+
+</ul>
+<div class="hamburger">
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span>   
+   
 </div>
-
-
-
+</nav>
+</div>
+</div>
 <div class="reservationSummaryBackground">
-  
 <div class="reservationSummary"> <div class="textStatus"> </div>
-<br>
-<div class="reservationCodeText"> </div>
-
-</div>
-  
+</div>  
 </div>
 <form id="reservationsForm">
- <div class="information">Reservations for more than 4 people are subject to a surcharge of 5 €  per person.</div> 
-  <input type="text" id="name" name="name" placeholder=" Last name" required>
-  <input type="email" id="email" name="email" placeholder="Email"  required>
-  <input type="number" id="phone" name="phone" placeholder=" Phone" >
-<input  type="number" id="number_of_guests" name="number_of_guests" placeholder="Number of guests"  required>
-<div class="information">You can select a table by clicking on the table number on the <b>restaurant</b> layout on the left. Table numbers range from<b> 9</b> to <b>23</b>.</div> 
-<input type="number" id="table_number" name="table_number" placeholder="Table number 9 - 23" min="9" max="23" required >
+<div class="information">Rezerwacje dla więcej niż 4 osób podlegają dopłacie w wysokości 5 € za osobę.</div>
+<input type="text" id="name" name="name" placeholder="Nazwisko" required>
+<input type="email" id="email" name="email" placeholder="Email"  required>
+<input type="number" id="phone" name="phone" placeholder=" Telefon" >
+<input  type="number" id="number_of_guests" name="number_of_guests" placeholder="Liczba gości"  required>
+<div class="information">Możesz wybrać stolik, klikając na numer stolika na układzie <b>restauracji</b> po lewej stronie. Numery stolików wahają się od <b>9</b> do <b>23</b>.</div>
+<input type="number" id="table_number" name="table_number" placeholder="Stoliki 9 - 23" min="9" max="23" required >
 <input type="date" id="reservation_date" name="reservation_date" max="2026-10-31" required >
 <input type="time" id="reservation_time" name="reservation_time" value="09:00" required>
-  <div id="contenerReservationInfo">
-  </div>
-
-
-
-
-<textarea    rows="4" cols="50"  id="message" name="message" placeholder=" Message"></textarea>
-
-  <input type="submit" id="submit" value=" Submit">
-  <div class="information" style="color: #be8040; top: 14px;">Accept the rules to send</div> 
-  <label class="containerCheck">I consent to the processing by HollaPolla of my personal data contained in this contact form for the purpose and to the extent necessary to process the application.
-    <input type="checkbox"  name="checkbox"  required >
-    <span class="checkmark"></span>
-  </label>
-  <label class="containerCheck">I consent to the processing by HollaPolla of my personal data contained in this contact form for the purpose of sending me commercial offers for the company's own products electronically.
-    <input type="checkbox" name="checkbox" required>
-    <span class="checkmark"></span>
-  </label>
-  <label class="containerCheck"> I consent to the processing by HollaPolla of my personal data contained in this contact form for the purpose of telephone contact by the company's representatives in matters related to the commercial offer for its own products.
-    <input type="checkbox" name="checkbox"  required>
-    <span class="checkmark"></span>
-  </label>
-
-  </div> 
-
-
+<div id="contenerReservationInfo">
+</div>
+<textarea    rows="4" cols="50"  id="message" name="message" placeholder=" Wiadomość"></textarea>
+<input type="submit" id="submit" value="Wyślij">
+<div class="information" style="color: #be8040; top: 14px;">Akceptuj zasady wysyłania</div>
+<label class="containerCheck">Wyrażam zgodę na przetwarzanie przez HollaPolla moich danych osobowych zawartych w niniejszym formularzu kontaktowym w celu i zakresie niezbędnym do realizacji zgłoszenia.
+<input type="checkbox" name="checkbox" required >
+<span class="checkmark"></span>
+</label>
+<label class="containerCheck">Wyrażam zgodę na przetwarzanie przez HollaPolla moich danych osobowych zawartych w niniejszym formularzu kontaktowym w celu przesyłania mi drogą elektroniczną ofert handlowych własnych produktów firmy.
+<input type="checkbox" name="checkbox" required>
+<span class="checkmark"></span>
+</label>
+<label class="containerCheck"> Wyrażam zgodę na przetwarzanie przez HollaPolla moich danych osobowych zawartych w niniejszym formularzu kontaktowym w celu kontaktu telefonicznego przedstawicieli firmy w sprawach związanych z ofertą handlową własnych produktów.
+<input type="checkbox" name="checkbox" required>
+<span class="checkmark"></span>
+</label>
+</div> 
 </form>
 
 <div id="contenerImage">
@@ -176,14 +148,13 @@ c-47 3 -90 -2 -121 -12z"/>
 </g>
 </svg>
 
-
 <img id="imageReservations0" src="assets/images/mapTable.webp">
 
 </div>
 
 <!-- email  connect start -->
 <script src="https://smtpjs.com/v3/smtp.js"></script>
-<!-- email  connect end -->
+
 <script src="../scripts/reservation.js" defer></script>
 <script src="../scripts/script.js" defer></script>
 </body>

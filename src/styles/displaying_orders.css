@@ -9,14 +9,22 @@ body {
     }
     
     #printOrdersBox {
-    display:flex;
-    position:relative
+  
+    position:relative;
+width: 100%;
+    margin:1.5%;
+
     }
     
     #printOrders {
-    padding:1%;
-    font-size:25px;
-    background-color:#2424246a;
+        line-height: 1.6 !important;
+        position: absolute;
+
+    font-size:20px;
+    left:50%;
+ 
+    transform:translateX(-50%);
+ 
     color:#fff;
     z-index:95
     }

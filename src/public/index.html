@@ -1,98 +1,192 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-  <meta charset="UTF-8">
-  <title>HollaPolla</title>
+<meta charset="UTF-8">
+<title>HollaPolla</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="../styles/style.css">
-  <link rel="icon" type="assets/images/jpg" href="assets/images/browserpictogram.jpg">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../styles/style.css">
+<link rel="icon" type="assets/images/jpg" href="assets/images/browserpictogram.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../styles/orders.css">
+<!-- email  connect start -->
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 
 </head>
-  <!-- gtranslate start -->
-  <div class="gtranslate_wrapper"></div>
+<!-- gtranslate start -->
+<div class="gtranslate_wrapper"></div>
 <script>window.gtranslateSettings = {"default_language":"en","native_language_names":true,"detect_browser_language":true,"languages":["en","pl","nl","fr"],"wrapper_selector":".gtranslate_wrapper","switcher_horizontal_position":"right","float_switcher_open_direction":"right"}</script>
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 
-  <!-- gtranslate start  end-->
 <body>
-  <div class="nav_headar">
-      
-    <div class="container">
-      <nav class="navbar">
-        <a href="/." class="nav-logo"><img    class="logoHP"  src="assets/images/logoHP.webp">  </a>
-        <ul class="nav-menu">
-         <li class="nav-item">
-          <a class="nav-link menu-language"></a>     
-   </li>
+<div class="nav_headar">
+<div class="container">
+<nav class="navbar">
+<a href="/." class="nav-logo"><img    class="logoHP"  src="assets/images/logoHP.webp">  </a>
+<ul class="nav-menu">
 <li class="nav-item">
-<a href="https://reservations.hollapolla.nl/" class="nav-link" id="openReservation"   style="color:#be8040"    >Rezerwacjie</a>        
- </li>
-<li class="nav-item">
-  <a href="orders.php" class="nav-link" id="openReservations"   style="color:#f4d135"    >Zamówienia online</a>        
+<a class="nav-link">Menu</a>     
 </li>
 
 <li class="nav-item">
-  <a href="#contact" class="nav-link">Kontakt</a>        
-</li>
-</li>
-</li>
-<li class="nav-item">
-     
+<a href="reservation.html" class="nav-link" id="openReservation"   style="color:#be8040" >Rezerwacjie stolika</a>        
 </li>
 
 <li class="nav-item">
-  
-    </li>
-    <li class="nav-item">
-  <a href="https://www.facebook.com/profile.php?id=61555700734528 " class="fa fa-facebook"></a>
-  <a href="https://www.instagram.com/hollapolla66/?utm_source=qr&igsh=MXFzdG11cWE0OXhvNg%3D%3D" class="fa fa-instagram"></a>
-  </li>
+<a class="nav-link" > hollapolla66@gmail.com</a>        
+</li>
+
+<li class="nav-item">
+<a class="nav-link">  + 31 6 58723606</a>        
+</li>
 
 
-
-        </ul>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </nav>
-    </div>
-   </div>
-  </div>
+<li class="nav-item">
+<a href="https://www.facebook.com/profile.php?id=61555700734528 " class="fa fa-facebook"></a>
+<a href="https://www.instagram.com/hollapolla66/?utm_source=qr&igsh=MXFzdG11cWE0OXhvNg%3D%3D" class="fa fa-instagram"></a>
+</li>
+</ul>
+<div class="hamburger">
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span>
+</div>
+</nav>
+</div>
+</div>
+</div>
 <header>
-  <div class="center">
-    <h1 id ="welcome" class="alex-brush">Witajcie</h1>
-    <h2>Hollapolla</h2>
-    <span id="asterisk">*</span>
- <p id="textHeder">Największa Polska restauracja w Holandii</p>
-    <br> 
-
-  </div>
+<div class="center">
+<h1 id ="welcome" class="alex-brush">Witajcie</h1>
+<h2>Hollapolla</h2>
+<span id="asterisk">*</span>
+<p id="textHeder">Największa Polska restauracja w Holandii</p>
+<br> 
+</div>
 </header>
 
-<section class="menu">
-  <img class="menuImage"  src="assets/images/menu_image_pl_0.webp">
-  <img class="menuImage"  src="assets/images/menu_image_pl_1.webp">
-  <img class="menuImage"  src="assets/images/menu_image_pl_2.webp">
-  <img class="menuImage"  src="assets/images/menu_image_pl_3.webp">
-  <img class="menuImage"  src="assets/images/menu_image_pl_4.webp">
-  <img class="menuImage"  src="assets/images/menu_image_pl_5.webp">
-  <img class="menuImage"  src="assets/images/menu_image_pl_6.webp">
-  <img class="menuImage"  src="assets/images/menu_image_pl_7.webp"> 
+<div class="orderSummaryBackground">
+<div class="orderSummary">
+<div class="textStatus">
+</div>
+</div>
+</div>
+  
+<div id="ordersForm">
+<div class="information"></div><br> 
+<input type="text" id="first_name" placeholder=" Last name" >
+<input type="email" id="email" name="email" placeholder="Email"> 
+<input type="number" id="phone" name="phone" placeholder=" Phone" >
+<textarea    rows="2" cols="10"  id="addres" name="addres" placeholder=" Addres"  ></textarea>
+  
+<div id="contenerOrderInfo">
+<dv class="boxOrders">
+<div class="numbersOrderLocation"></div>
+<div class="add"></div>
+<div class="subtract"></div>
+<div class="quantity"></div>
+</dv>
+</div>
 
+<div class="information display" style="color: #ff0000; font-size: 12px;">To send an order, click on the name of the dish on the menu or enter the dish number in the message.</div>
+<textarea  rows="4" cols="10" id="message" name="message" placeholder=" Message"></textarea>
+<input type="submit" id="submit" value="submit">
+<div class="totalPayment">
+<div>Totaal € &nbsp; </div> <div class="sum"> </div>
+</div>
+<div class="information" style="color: #be8040;">Accept the rules to send</div> 
+<label class="containerCheck">I consent to the processing by HollaPolla of my personal data contained in this contact form for the purpose and to the extent necessary to process the application.
+<input type="checkbox"  name="checkbox" required>
+<span class="checkmark"></span>
+</label>
+<label class="containerCheck">I consent to the processing by HollaPolla of my personal data contained in this contact form for the purpose of sending me commercial offers for the company's own products electronically.
 
-</section>
-<footer>
-  <section id="contact"></section>
-<div class="textLocation"><b>Lokalizacja</b><br><br>Wilhelminapark 66, 5041 ED Tilburg, Holandia<br></div>
-<div class="textContact"><b>Kontakt</b><br><br>Email: hollapolla66@gmail.com<br>Phone: + 31 6 58723606<br></div>
-<div class="textInformation"><b>Informacije</b><br><br>kvk: 92146872<br></div>
-</footer>
+<input type="checkbox" name="checkbox"required >
+<span class="checkmark"></span>
+</label>
+<label class="containerCheck"> I consent to the processing by HollaPolla of my personal data contained in this contact form for the purpose of telephone contact by the company's representatives in matters related to the commercial offer for its own products.
 
+<input type="checkbox" name="checkbox"required >
+<span class="checkmark"></span>
+</label>
+</div> 
+</div>
+</div>
+<div id="contenerImage">
+<div class="information">When ordering through our website you will receive a <b   style="color: #be8040;">10%</b> discount. For orders over<b   style="color:#f4d135"> € 50 free delivery</b>, under € 4.<br> Payment can be made upon receipt of the order.  Payment by <b   style="color: #be8040;">card </b>or <b   style="color: #009e20;">cash</b>.<br><br>Click on the name of a <b  style="color:#f4d135">dish </b>in the menu to add it to your order.
+</div>
+
+<h3>Voorgerechten</h3>
+<button class="position"  value="12">Rundertartaar met boerenbrood € 12</button><br>
+<div class="info_about_dish">Beschikbaar vrijdag,zaterdag.Zondag / komkommer, witte ui, hampignons, eigeel, boter</div>
+<button class="position" value="6">6 Toast met knoflookboter € 6</button><br>
+<h3>Soepen</h3>
+
+<button class="position"value="6">Kippensoep € 6</button><br>
+<button class="position"value="8">Zure soep met worst en ei € 8</button><br>
+<button class="position"value="7">Uiensoep met kaas € 7</button><br>
+<button class="position"value="9">Pittige soep met getrokken varkensvlees € 9</button><br>
+  
+<h3>Dinersets</h3>
+<button class="position"value="28">Varkensvlees met paddestoelsaus € 28</button><br>
+<button class="position"value="29">Rundvleesrol en silesische dumplings € 29</button><br>
+<button class="position"value="24">Varkensschnitzel op een half bord € 24</button><br>
+<button class="position"value="22">Kipschnitzel € 22</button><br>
+<button class="position"value="22">Witte kool gevuld met gehaktrijst in tomatensaus € 22</button><br>
+<button class="position"value="24">Zalm met dille saus € 24</button><br>
+<button class="position"value="22">Kabeljauwfilet in bier gepaneerd  € 22</button><br>
+<button class="position"value="22">Hongaarse taart € 22</button><br>
+  
+<h3>Salades</h3>
+<button class="position"value="7">Huis salade € 7</button><br>
+<div class="info_about_dish">/paprika, tomaat, rode ui, groene komkommer, vinaigrette</div>  
+
+<button class="position"value="18">Ceasar salade met kip € 18</button><br>
+<div class="info_about_dish">/ijsbergsla, komkommer, paprika, rode ui, gedroogde tomaat, parmezaan, knoflookcroutons, vinaigrettesaus</div>  
+
+<button class="position"value="18">Salade met varkenshaas puntjes € 18</button><br>
+<div class="info_about_dish">/ijsbergsla, komkommer, paprika, rode ui, kappertjes, knoflookcroutons, azuurblauwe saus, vinaigrettesaus</div>
+
+<button class="position"value="18">Salade met gerookte zalm € 18</button><br>
+<button class="position"value="18">Salade met gerookte tofu € 18</button><br>
+<button class="position"value="18">Salade met gerookte feta € 18</button><br>
+<div class="info_about_dish">/ijsbergsla, komkommer, paprika, rode ui, knoflookcroutons, vinaigrettesaus</div>
+  
+<h3>Kleine salades</h3>
+<button class="position"value="4">Bieten € 4</button><br>
+<button class="position"value="4">Huis salade € 4</button><br>
+<button class="position"value="4">Coleslaw € 4</button><br>
+
+<h3>Pasta / dumplings</h3>
+<button class="position"value="15">Spinazie en kaas tagliatelle  € 15</button><br>
+<button class="position"value="17">Russische dumplings € 17</button><br>
+<button class="position"value="17">Dumplings met vlees € 17</button><br>
+<button class="position"value="6">Silesische dumplings € 6</button><br>
+  
+<h3>Extra's</h3>
+<button class="position"value="4">Aardappelen puree € 4</button><br>
+<button class="position"value="4">Gebakken aardappelen € 4</button><br>
+<button class="position"value="4">Sauzen  € 4</button><br>
+<div class="info_about_dish">Gebraden, tomaat, dille</div>
+  
+<h3>Kindermenu</h3>
+<button class="position"value="6">Kippensoep € 6</button><br>
+<button class="position"value="6">Tomatensoep € 6</button><br>
+<button class="position"value="8">Gebakken vissticks € 8</button><br>
+<button class="position"value="8">Kipnuggets € 8</button><br>
+<button class="position"value="22">Kipschnitzel € 22</button><br>
+<button class="position"value="9">Pannenkoeken met roomkaas en fruit € 9</button><br>
+  
+<h3>Desserts</h3>
+<button class="position"value="4">1 bolletje ijs € 4</button><br>
+<button class="position"value="8">Ijsdessert met karamel en noten € 8</button><br>
+<button class="position"value="8">Chocoladetaart met slagroom en ijs € 8</button><br>
+<button class="position"value="8">Warme appeltaart met slagroom en ijs € 8</button><br>
+<button class="position"value="8">Kwarktaart met chocolade € 8</button>
+</div>
+</div>
+<br>
 <script src="../scripts/script.js" defer></script>
+<script src="../scripts/orders.js" defer></script>
 </body>
 </html>

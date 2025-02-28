@@ -1,5 +1,4 @@
 <?php
-
 try{
 $dbhost = '';
 $dbname='';
@@ -11,14 +10,5 @@ catch(PDOException $e)
 {
 echo "ERRPR:" . $e -> getMessage() . "<br>";
 };
-
 ?>
-
-
-
-
-
-
-
-
 

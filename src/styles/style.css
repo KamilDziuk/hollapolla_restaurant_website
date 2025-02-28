@@ -3,20 +3,16 @@ body {
     margin: 0;
     min-height: 100vh;
     
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../public/assets/images/background.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.749), rgba(0, 0, 0, 0.683)), url("../public/assets/images/background.webp");
     
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    
     color: #fff;
     z-index: 94;
     }
-    
-  
-  
-  
+
   
   .fa
   {
@@ -36,13 +32,13 @@ body {
   button {
   border: 0;
   background: 0;
-  cursor: pointer;
+
   }
   
-  a {
+  /* a {
   text-decoration: none;
   padding-bottom: 5px;
-  }
+  } */
   
   ul {
   list-style: none;
@@ -144,6 +140,7 @@ body {
   color: #be8040;
   font-size: 100px;
   margin-bottom: 34px;
+  z-index: 99;
   }
   header .center h2 {
   margin-top: 100px;
@@ -187,6 +184,7 @@ body {
   nav div.show {
   transform: scale(1);
   opacity: 1;
+  z-index: 99;
   }
   
   
@@ -195,6 +193,7 @@ body {
   color: #be8040;
   font-size: 75px;
   line-height: 0;
+  z-index: 99;
   }
   
   
@@ -213,6 +212,7 @@ body {
   margin-top: 0;
   font-family: "PT Sans", sans-serif;
   line-height: 1.5;
+  z-index: 99;
   }
   .center-text a {
   font-family: "PT Sans", sans-serif;
@@ -222,6 +222,7 @@ body {
   font-weight: 600;
   letter-spacing: 1px;
   border-bottom: solid 2px #be8040;
+  z-index: 99;
   }
   
   .add-flex {
@@ -547,7 +548,7 @@ body {
   justify-content : space-between;
   align-items     : center;
   transition      : 0.6s;
-  z-index: 9999;
+  z-index: 999;
   }
   
   .nav_headar:hover{
@@ -559,6 +560,7 @@ body {
   background-color: #26262632;
   backdrop-filter : blur(15px);
   padding         : 0px 0px;
+  z-index: 999;
   }
   
   li{
@@ -640,15 +642,7 @@ body {
   color          : black;
   text-decoration: none;
   }
-  footer
-{
-position: relative;
-display: flex;
-margin-top: 10%;
-background-color: #26262632;
-backdrop-filter : blur(15px);
-height: 130px;
-}
+
 
 .textContact,.textLocation, .textInformation
 {
@@ -680,6 +674,7 @@ height: 130px;
   }
   .hamburger{
   display: block;
+  z-index: 99999999;
   }
     
   .hamburger.active .bar:nth-child(2){
@@ -701,7 +696,7 @@ height: 130px;
       top             : 70px;
       gap             : 0;
       flex-direction  : column;
-      background-color: #26262632;
+      background-color:#262626;
       width           : 100%;
       text-align      : center;
       transition      : 0.3s;
@@ -723,7 +718,7 @@ height: 130px;
   *{
     padding: 0;
     margin : 0;
-    z-index: 999;
+ 
     }
 
 
@@ -744,17 +739,7 @@ left: 10%;
     @media(max-width:800px){
 
 
-
-      footer
-      {
-      position: relative;
-      display:block;
-      bottom: 0;
-      background-color: #26262632;
-      backdrop-filter : blur(15px);
-      height: 230px;
-      
-      }      
+ 
 
    .textContact,.textLocation, .textInformation
 {

@@ -1,35 +1,22 @@
-body {
-  margin:0;
-  background-image:linear-gradient(#0009,#0009),url(../public/assets/images/background-image-displaying_orders.webp);
-  background-size:cover;
-  background-position:center;
-  background-attachment:fixed;
-  background-repeat:no-repeat;
-  color:#fff;
-  z-index:94
-  }
-  .position 
-  {
-    font-size: 25px;
-    display: flex;
-    text-align:left;
-    padding:2% 2% 0 5%
+
+.position 
+{
+  position:relative;
+color: #ffffff;
+border:0;
+background:0;
+cursor:pointer;
+font-size: 25px;
+
+text-align:left;
+
+padding:2% 2% 0% 5%
   }
 
   .position:hover
   { 
-color:  #be7f40;
+color:  #be7f40 !important; 
   }
-
-  .pricStyle
-  {
-    position: absolute ;
-   margin-left: 85%;
- font-weight: 900;
- font-size: 25px;
- 
-  }
-
 
   .info_about_dish
   {
@@ -54,211 +41,83 @@ padding:0% 3% 0 5%
   background-color:#000000ad;
   z-index:998
   }
-  
+ 
   .orderSummary {
   position:absolute;
-  top:20%;
-  width:300px;
-  height:40%;
+top: 20%;
+width: 40%;
+z-index:9999999 !important;
+  
   transform:translateX(-50%);
   left:50%;
   padding-top:5%;
   border-radius:2%;
-  background-color:#525252;
+  background-color:#5c5c5c3a;
+  backdrop-filter:blur(15px);
   text-align:center;
-  z-index:998
+  z-index:998;
   }
   
-  .fa {
-  font-size:30px!important;
-  margin:10px
+
+  button
+  {
+    color: #ffffff !important;
+  }
+
+  
+  .logoHPPopup
+  {
+    position: relative;
+    width:30%;
+    z-index:99
   }
   
-  h2 {
-  margin-top:1%;
-  margin-bottom:1%
-  }
-  
-  button {
-  border:0;
-  background:0;
-  cursor:pointer
-  }
-  
-  a {
-  text-decoration:none;
-  padding-bottom:5px
-  }
-  
-  ul {
-  list-style:none;
-  padding:0;
-  margin:0
-  }
+
   
   #contenerOrderInfo {
   position:relative;
-  width:100%;
-  margin-top:5%;
+  width:100%;  
+  margin-top:4.2%;
+  margin-left: 0%;
+  margin-bottom:4.2%;
   height:10vh;
   overflow:auto!important;
-  text-align:center;
-  border:solid 2px #fff!important;
-  left:0
-  }
-  
-  .boxOrderInfo {
-  margin-top:2%;
-  transform:translateX(-50%);
-  left:50%;
-  position:relative;
+  border:solid 2px #be8040;
 
-  width:100%
+  }
+
+  .add, .subtract, .quantity
+  {
+    position:relative;
+    padding-left: 3%  ;
+    padding-right: 3%  ;
+  
+  }
+
+  .totalPayment
+  {
+    position: relative;
+    display: flex;
+    font-size: 20px;
+margin-top: 2%;
+    padding:1% 2% 5% 5%
   }
   
-  header nav {
-  padding:15px 35px;
-  display:flex;
-  position:relative
-  }
-  
-  header nav h2 {
-  margin-bottom:0;
-  flex:1;
-  letter-spacing:3px;
-  font-family:"Overpass Mono",monospace!important
-  }
-  
-  header nav h2 #logo {
-  color:lightgray;
-  text-transform:uppercase;
-  border-bottom:solid 2px lightgray
-  }
-  
-  header nav .nav-button {
-  color:silver;
-  font-size:23px
-  }
-  
-  header nav div {
-  background:#000000e6;
-  position:fixed;
-  right:0;
-  left:0;
-  top:0;
-  bottom:0;
-  z-index:1;
-  text-align:center;
-  transform:scale(0);
-  opacity:0;
-  transition:opacity .2s
-  }
-  
-  header nav div ul {
-  position:relative;
-  height:100%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center
-  }
-  
-  header nav div ul .exit-menu {
-  position:absolute;
-  top:15px;
-  right:15px;
-  color:lightgray;
-  font-size:20px;
-  padding:10px
-  }
-  
-  header nav div ul li {
-  font-family:"PT Sans",sans-serif!important;
-  text-transform:uppercase
-  }
-  
-  header nav div ul li a {
-  display:block;
-  color:lightgray;
-  padding:15px 5px;
-  transition:all .4s
-  }
-  
-  header nav div ul li a:hover,header nav div ul li a .active:hover {
-  color:#be8040;
-  border-bottom-color:#be8040
-  }
-  
-  nav div.show {
-  transform:scale(1);
-  opacity:1
-  }
-  
-  .center-text {
-  text-align:center;
-  margin-bottom:40px;
-  margin-top:30px;
-  color:#4d4d4d
-  }
-  
-  .center-text h2 {
-  line-height:0
-  }
-  
-  .center-text p {
-  margin-top:0;
-  font-family:"PT Sans",sans-serif;
-  line-height:1.5
-  }
-  
-  .center-text a {
-  font-family:"PT Sans",sans-serif;
-  color:#be8040;
-  text-transform:uppercase;
-  font-size:12px;
-  font-weight:600;
-  letter-spacing:1px;
-  border-bottom:solid 2px #be8040
-  }
-  
-  .menu {
-  padding:30px
-  }
-  
-  .menu-images {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  grid-gap:10px
-  }
-  
-  .menu-images img {
-  width:100%
-  }
-  
-  .logoHP {
-  margin-top:-10px!important;
-  left:1%;
-  max-width:130px;
-  max-height:130px;
-  z-index:99
-  }
-  
-  .menu {
-  position:relative;
-  left:50%;
+.boxOrders
+{
   transform:translateX(-50%);
-  width:90%;
-  text-align:center;
-  margin:20px 0
-  }
+  left:50%;
+position: relative;
+display: flex;
+width: 55%;
+margin-left: 5.5%;
+padding: 1%;
+
+}
+
+
   
-  .menuImage {
-  position:relative;
-  right:0;
-  width:50%;
-  margin-bottom:2%;
-  margin-top:2%
-  }
-  
+
   #contenerImage {
   position:absolute;
   left:30%;
@@ -278,7 +137,7 @@ padding:0% 3% 0 5%
   left:70%;
   transform:translateX(-50%);
   margin-bottom:0;
-  width:350px;
+  width:30%;
   margin-top:7%;
   z-index:22!important
   }
@@ -299,15 +158,20 @@ padding:0% 3% 0 5%
   transform:translateX(-50%);
   background-color:#4b4b4b00;
   width:90%;
+  padding: 2%;
+ margin-top: -12%;
   position:relative;
-  margin-top:5%;
+ text-align: left !important;
+
+  line-height: 1.6;
   left:50%;
-  margin-bottom:1%;
-  font-style:12px;
-  text-align:center
+
+font-size: 20px;
+ 
   }
   
   input,textarea {
+    width: 48%;
   text-align:center;
   position:relative;
   display:flex;
@@ -317,29 +181,28 @@ padding:0% 3% 0 5%
   top:2%;
   width:46%;
   font-size:20px;
-  background-color:#4d4d4d;
+  background-color:#4d4d4d00;
   color:#fff
   }
-  
-  input[type=time] {
-  position:relative;
-  color:#fff;
-  width:85px
-  }
-  
-  input[type="time"]::-webkit-calendar-picker-indicator {
-  filter:invert(1) sepia(0) saturate(10000%) hue-rotate(0deg)
-  }
-  
-  input[type="date"]::-webkit-calendar-picker-indicator {
-  filter:invert(1) sepia(0) saturate(10000%) hue-rotate(0deg)
+  textarea {
+width: 48%;
   }
   
   input:focus {
-  outline:none;
-  border-color:#fff;
-  box-shadow:0 0 5px #2e7d3280
+
+  border-color:#ffffff;
+
   }
+  input:hover {
+
+    border-color:#ffffff;
+  
+    }
+    textarea:hover {
+
+      border-color:#ffffff;
+    
+      }
   
   label {
   position:relative;
@@ -349,188 +212,7 @@ padding:0% 3% 0 5%
   font-size:18px
   }
   
-  @media screen and (max-width: 425px) {
-  header,.bread-background,.cake-background {
-  background-attachment:scroll
-  }
-  
-  h2 {
-  margin-top:3%!important;
-  margin-bottom:1%
-  }
-  }
-  
-  nav {
-  position:initial!important;
-  align-items:baseline;
-  padding:20px 70px!important
-  }
-  
-  nav .nav-button {
-  display:none
-  }
-  
-  nav div {
-  position:initial!important;
-  background:none!important;
-  opacity:initial!important;
-  transform:initial!important
-  }
-  
-  nav div ul {
-  position:initial!important;
-  flex-direction:row!important
-  }
-  
-  nav div ul .exit-menu {
-  display:none
-  }
-  
-  nav div ul li a {
-  font-size:12.8px;
-  margin:0 10px;
-  letter-spacing:1px;
-  padding:5px 0!important
-  }
-  
-  nav div ul .active {
-  border-bottom:solid 1px lightgray
-  }
-  
-  .add-padding {
-  padding:50px 0
-  }
-  
-  .add-flex {
-  flex-direction:row;
-  align-items:center
-  }
-  
-  .add-flex div:first-child {
-  flex:1;
-  padding:0 50px
-  }
-  
-  .add-flex div:last-child {
-  min-width:400px;
-  margin:50px
-  }
-  
-  .menu-images {
-  flex:1
-  }
-  
-  .menu div:last-child {
-  flex:1
-  }
-  
-  .nav_headar {
-  background-color:#26262600;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  transition:.6s;
-  z-index:960
-  }
-  
-  .nav_headar:hover {
-  background-color:#26262632
-  }
-  
-  .nav_headar.sticky {
-  background-color:#26262632;
-  backdrop-filter:blur(15px);
-  padding:0
-  }
-  
-  li {
-  list-style:none
-  }
-  
-  a {
-  color:#fff;
-  text-decoration:none
-  }
-  
-  .container {
-  width:90%;
-  margin:auto
-  }
-  
-  .navbar {
-  min-height:70px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center
-  }
-  
-  .nav-logo {
-  font-size:2rem
-  }
-  
-  .nav-menu {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:35px;
-  margin-top:-30px;
-  left:50%;
-  transform:translateX(-30%)
-  }
-  
-  .nav-link {
-  transition:.3s ease-out
-  }
-  
-  .nav-link:hover {
-  color:#7e7e7e
-  }
-  
-  .hamburger {
-  display:none;
-  cursor:pointer
-  }
-  
-  .bar {
-  display:block;
-  width:25px;
-  height:3px;
-  margin:5px auto;
-  -webkit-transition:all .3s ease;
-  transition:all .3s ease;
-  background-color:#fff
-  }
-  
-  .link:hover {
-  color:#7e7e7e
-  }
-  
-  .dropdown.active > .link {
-  color:#fff
-  }
-  
-  .dropdown {
-  position:relative
-  }
-  
-  .dropdown-menu a {
-  color:#000;
-  text-decoration:none
-  }
-  
-  .textContact,.textLocation,.textInformation {
-  position:relative;
-  margin-left:1.5%;
-  margin-right:1.5%;
-  margin-top:2%;
-  left:26%
-  }
-  
+
   .containerCheck {
   display:block;
   position:relative;
@@ -610,11 +292,11 @@ padding:0% 3% 0 5%
     position:absolute;
     display:none
     }
-    
+
     .containerCheck input:checked ~ .checkmark:after {
     display:block
     }
-    
+
     .containerCheck .checkmark:after {
     top:5px;
     left:5px;
@@ -622,71 +304,15 @@ padding:0% 3% 0 5%
     height:5px;
     background:#fff
     }
-  @media(max-width:1200px) {
-  .logoHP {
-  position:absolute;
-  top:30px;
-  max-width:100px;
-  max-height:100px
-  }
-  
-  p {
-  font-size:15px!important
-  }
-  
-  .hamburger {
-  display:block
-  }
-  
-  .hamburger.active .bar:nth-child(2) {
-  opacity:0
-  }
-  
-  .hamburger.active .bar:nth-child(1) {
-  transform:translateY(8px) rotate(45deg)
-  }
-  
-  .hamburger.active .bar:nth-child(3) {
-  transform:translateY(-8px) rotate(-45deg)
-  }
-  
-  .nav-menu {
-  transform:translateX(0%);
-  position:fixed;
-  left:-100%;
-  top:70px;
-  gap:0;
-  flex-direction:column;
-  background-color:#262626;
-  width:100%;
-  text-align:center;
-  transition:.3s;
-  z-index:960
-  }
-  
-  .nav-item {
-  margin:9px 0
-  }
-  
-  .nav-menu.active {
-  left:0
-  }
-  }
-  
-  * {
-  padding:0;
-  margin:0;
-  z-index:960
-  }
 
-  @media(max-width:1100px) {
- .pricStyle
-  {
-  position: relative ;
-  margin-left: 10%;
-  } 
-  }
+
+  
   @media(max-width:950px) {
+
+    .orderSummary {
+      width:50%
+      }
+      
   .information {
   position:relative;
   padding-bottom:1%
@@ -703,6 +329,14 @@ padding:0% 3% 0 5%
   overflow:auto;
   z-index:2
   }
+  .boxOrders
+  {
+
+  width: 98%;
+  padding: 1%;
+  margin-left: 0%;
+  }
+
 
   #contenerOrderInfo {
   margin-top:10%
@@ -717,7 +351,7 @@ padding:0% 3% 0 5%
   transform:translateX(-50%);
   margin-bottom:0;
   width:60%;
-  margin-top:15%
+  margin-top:5%
   }
   
   input,textarea {
@@ -727,32 +361,38 @@ padding:0% 3% 0 5%
   margin:1.5%;
   transform:translateX(-50%);
   top:-5%;
-  font-size:12px
+  font-size:16px
   }
   
   label {
   position:relative;
   top:10%;
   margin:1%;
-  font-size:12px
+  font-size:16px
   }
   
   .textStatus {
+    margin-top: 0%;
   position:relative;
-  margin-top:22%!important;
-  margin-bottom:1%;
-  font-style:12px
+  font-size:16px;
+ 
   }
 
   
   .textContact,.textLocation,.textInformation {
+    
   position:relative;
   margin-left:1.5%;
   margin-right:1.5%;
   margin-top:2%;
   left:0
   }
+  .totalPayment
+  {
 
+    font-size: 16px !;
+
+  }
 
   .position 
   {
@@ -760,11 +400,6 @@ padding:0% 3% 0 5%
 
   }
 
-  .pricStyle
-  {
- font-size: 18px;
- 
-  }
   .info_about_dish
   {
 font-size: 15px;
@@ -778,40 +413,34 @@ font-size: 15px;
   }
   
   @media(max-width:600px) {
+
+    button
+    {
+font-size: 9px;
+    }
   .orderSummary {
   width:80%
   }
   
-  .menuImage {
-  width:98%
-  }
-  
-  p {
-  font-size:10px!important
-  }
+
+
   
   .textStatus {
-  margin-top:16%
+    font-size:17px
   }
 
   #ordersForm {
-    margin-top:20%;
+    margin-top:5%;
 
   }
   
   }
   
   @media(max-width:450px) {
-  p {
-  font-size:7px!important
-  }
 
-    .numbersOrderLocation,.quantityLocation
-    {
-font-size: 9px;
-    }
+
 #ordersForm {
-  margin-top:35%;
+  margin-top:5%;
   width: 98% !important;
 }
 
@@ -819,7 +448,6 @@ font-size: 9px;
   
   @media(max-width:350px) {
   .textStatus {
-  top:-18%!important;
   font-size:12px!important;
   z-index:9999
   }
@@ -830,11 +458,6 @@ font-size: 9px;
 
   }
 
-  .pricStyle
-  {
- font-size: 15px;
- margin-left: 2%;
-  }
   .info_about_dish
   {
 font-size: 15px;

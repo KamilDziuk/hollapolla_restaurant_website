@@ -1,14 +1,11 @@
 <?php  
-require "../config/config_ordering.php";
-try {
+require "../config/config_reservation.php";
 
-// 
-$sql = "SELECT * FROM orders";
+try {    
+$sql = "SELECT * FROM reservations";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
-
-$orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
- 
+$reservation = $stmt->fetchAll(PDO::FETCH_ASSOC); 
 $stmt = null;
 $pdo = null;
  
