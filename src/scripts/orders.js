@@ -11,18 +11,12 @@ submit.style.display = "none";
 contenerOrderInfo.style.display = "none";
 orderSummaryBackground.style.display = "none";
 
+let OrderSystem = function(pric)
+{
 
 
 
- let orderCounter = setInterval(() => {
-orderCodeValue = Math.floor(Math.random() * 100);
-},1000);
-
-
-
-
-
-
+};
 
 
 
