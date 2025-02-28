@@ -104,7 +104,52 @@ if(window.matchMedia("(max-width:950px)").matches ){
   }
 document.querySelector('.subtract').appendChild(subtractElement);
 
+// subtracting the value from the total after clicking
+subtractElement.addEventListener('click', () => {
 
+  //subtract quantity
+  --quantity
+  
+  quantityElement.innerHTML = quantity;
+  
+  // interval intoxicating condition
+  let activRemoveOrders = setInterval(() => {
+  if(deleteValue <= 0 )
+  {
+  
+  // remove object
+  if (document.querySelector(`#quantity${id_orders}`)) document.querySelector(`#quantity${id_orders}`).remove();
+  if (document.querySelector(`#${id_orders}`)) document.querySelector(`#${id_orders}`).remove();
+  if (document.querySelector(`#subtract_pric_${id_orders}`)) document.querySelector(`#subtract_pric_${id_orders}`).remove();
+  if (document.querySelector(`#add_pric_${id_orders}`)) document.querySelector(`#add_pric_${id_orders}`).remove();
+  
+  position_clean ="Zamówienie usunięte przez klienta";
+  position.style.display = "block";
+  
+  clearInterval(activRemoveOrders);
+  }  
+  
+  // hiding the order window
+  if(sum.innerText  <= 0 )
+  {
+  position.style.display = "block";
+  displayInfo.style.display = "block";
+  if (submit) submit.style.display = "none";
+  if (contenerOrderInfo) contenerOrderInfo.style.display = "none";
+  if (orderSummaryBackground) orderSummaryBackground.style.display = "none";
+  clearInterval(activRemoveOrders);
+  }
+  },100)
+  
+  this.pric <= 0 ? sum.innerText  = 0 :sum.innerText  = this.pric -= parseInt(position.value);
+  
+  // subtract value to element add_pric_${id_orders} before click 
+  if (document.querySelector(`#add_pric_${id_orders}`)) deleteValue -= parseInt( document.querySelector(`#add_pric_${id_orders}`).value );
+  
+  });
+  };
+  
+  subtractButton();
 
 
 
