@@ -13,12 +13,106 @@ orderSummaryBackground.style.display = "none";
 
 let OrderSystem = function(pric)
 {
+
+// sum pric
+sum.innerText  =  0 ;
+
+this.pric = pric;
+this.positionClickSttus = false;
+this.positionClickSttus = false;
+position.forEach(position => {
+let quantity = 0;
 position.addEventListener("click", () => {
 
-})
+//initial value added or subtracted for each generated plus and minus button
+let deleteValue = 0;
+ quantity  ++;
+position.style.display = "none";
+displayInfo.style.display = "none";
+contenerOrderInfo.style.display = "block";
+submit.style.display = "block";
+this.positionClickSttus = true;
 
+// modification of menu text
+let position_clean = position.textContent.replaceAll(/\d+/g,"").replaceAll("€","");
+let id_orders = position_clean.replaceAll(" ","").toLocaleLowerCase();
 
+//create orders text and value elment
+let menuPositions =  () => {
+this.positionElement = document.createElement('button');
+this.positionElement.innerHTML=`${position_clean}`;
+this.positionElement.value =`${position.value}`;
+this.positionElement.id =`${id_orders}`;
+this.positionElement.style =" width: 150px; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 20px; padding: 1%;";
+if(window.matchMedia("(max-width:950px)").matches ){ 
+  this.positionElement.style =" width: 100px; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 12px; padding: 1%";
+}
+
+document.querySelector('.numbersOrderLocation').appendChild(this.positionElement);
 };
+menuPositions();
+
+//create orders text and value elment
+let quantityElement 
+let quantityOrders = () => {
+//create quantity orders button elment
+quantityElement = document.createElement('button');
+quantityElement.innerHTML = quantity;
+quantityElement.id =`quantity${id_orders}`;
+quantityElement.style =" font-size: 20px  !important;  padding: 1%; padding-top: 25%;"  ;
+if(window.matchMedia("(max-width:950px)").matches ){ 
+  quantityElement.style ="font-size: 16px  !important; padding: 1%; padding-top: 25%;"; 
+}
+document.querySelector('.quantity').appendChild(quantityElement);
+};
+quantityOrders();
+
+let addButton = () => {
+  //create add button elment
+let addElement = document.createElement('button');
+addElement.innerHTML = `+`;
+addElement.value =`${position.value}`;
+addElement.id = `add_pric_${id_orders}`;
+addElement.style =" color:#009e20  !important; font-size: 20px; padding: 1% ;  padding-top: 25%; "; 
+if(window.matchMedia("(max-width:950px)").matches ){ 
+addElement.style =" color:green !important; font-size: 16px; padding: 1%;  padding-top: 25%; "; 
+}
+document.querySelector('.add').appendChild(addElement);
+
+// adding  the value from the total after clicking
+addElement.addEventListener('click',  () => {
+  
+quantity ++
+quantityElement.innerHTML = quantity;
+// add value to element add_pric_${id_orders} before click
+if (document.querySelector(`#add_pric_${id_orders}`))deleteValue += parseInt( document.querySelector(`#add_pric_${id_orders}`).value);
+
+this.pric >= 0  ? sum.innerText  =  this.pric += parseInt ( position.value) : sum.innerText  = 0;
+});
+};
+addButton();
+
+let subtractButton = () => {
+//create subtract button elment
+let subtractElement = document.createElement('button');
+subtractElement.innerHTML = `-`;
+subtractElement.id = `subtract_pric_${id_orders}`;
+subtractElement.value =`${position.value}`;
+subtractElement.style =" color:red  !important; font-size: 20px;  padding: 1%;  padding-top: 35%;";
+if(window.matchMedia("(max-width:950px)").matches ){ 
+  subtractElement.style =" color:red  !important; font-size: 16px; padding: 1%;  padding-top: 35%;"; 
+  }
+document.querySelector('.subtract').appendChild(subtractElement);
+
+
+
+
+
+
+
+
+
+
 
 
 
