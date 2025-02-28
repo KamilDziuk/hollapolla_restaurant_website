@@ -218,6 +218,22 @@ let addBoxOrders = () => {
   
   });
 
+// displaying information about the status and data entered in the form
+let displayingInformation = () => {    
+
+  // show popup for a specific time
+  setTimeout( () => {
+  orderSummaryBackground.style.display = "none";
+  },10000)    
+  }   
+  displayingInformation();     
+  
+  };
+  orderConfirmation();
+  
+  // order confirmation values
+  let postOrders = async (first_name, email, addres, message) => 
+  {
 
 
 
