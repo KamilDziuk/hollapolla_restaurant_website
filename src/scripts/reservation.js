@@ -134,5 +134,26 @@ position_22.addEventListener("click", async () => {
   table_number = document.querySelector('#table_number').value = "23";
 });
 
+let reservationsForm = document.querySelector('#reservationsForm');
+let textStatus = document.querySelector('.textStatus');
 
+reservationsForm.addEventListener('submit',  async function(e) {
+e.preventDefault();
+let reservationCode;
+
+// create reservations code
+reservationCode = Math.floor(Math.random() * 100);
+
+
+//declaring a value from the form
+let name = document.querySelector('#name').value;
+let phone = document.querySelector('#phone').value;
+let email = document.querySelector('#email').value;
+let message = document.querySelector('#message').value;
+let number_of_guests = document.querySelector('#number_of_guests').value;
+let reservation_date = document.querySelector('#reservation_date').value;
+let reservation_time = document.querySelector('#reservation_time').value;
+let table_number = document.querySelector('#table_number').value;
+
+let formData =  new FormData();
 
