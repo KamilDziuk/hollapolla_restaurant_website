@@ -1,5 +1,5 @@
 
-
+![presentation](src/public/assets/videos/presentation.gif)
 
 # HollaPolla
 ## About the Project
