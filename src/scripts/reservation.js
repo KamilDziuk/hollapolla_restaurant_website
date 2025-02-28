@@ -156,4 +156,39 @@ let reservation_time = document.querySelector('#reservation_time').value;
 let table_number = document.querySelector('#table_number').value;
 
 let formData =  new FormData();
+// adding data in the form of key-value pairs.   
+formData.append('reservationsForm',reservationsForm);
+formData.append('reservation_date',reservation_date);
+formData.append('reservationCode',reservationCode);
+formData.append('reservation_time',reservation_time);
+formData.append('table_number',table_number);
+formData.append('name',name);
+formData.append('phone',phone);
+formData.append('email',email);
+formData.append('message',message);
+formData.append('number_of_guests',number_of_guests);
 
+// post value to post_reservation_email.php  file
+await  fetch('../controllers/post_reservation_email.php', {
+method: 'POST',
+body: formData
+}); 
+
+// post value to adding_reservation.php file
+await fetch('../controllers/adding_reservation.php', {
+method: 'POST',
+body: formData
+}); 
+
+reservationSummaryBackground.style.display = "block";
+// print  status reservation
+textStatus.innerHTML = `<img class="logoHPPopup" src="../public/assets/images/logoHP.webp"><br>
+<div style="color:#009e20 ; font-size:20px; font-weight: 800;">    Twoja rezerwacja została przyjęta!</div>
+<div style=" font-size:20px; font-weight: 800;">    Kod rezerwacji: ${reservationCode}</div>
+Rezerwacja:<br>Numer stolika: ${document.querySelector('#table_number').value}<br> Data: ${reservation_date}<br> Godzina: ${reservation_time} `;
+
+//classy reservationSummaryBackground appears after a specified time
+setTimeout( () => {
+reservationSummaryBackground.style.display = "none";       
+},10000)            
+});
