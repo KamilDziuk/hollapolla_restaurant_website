@@ -1,6 +1,10 @@
 let contenerReservationInfo = document.querySelector("#contenerReservationInfo");
 let reservationSummaryBackground = document.querySelector(".reservationSummaryBackground");
-contenerReservationInfo.style.display = "none";
+let reservationInformation = document.querySelector(".reservationInformation");
+let submit = document.querySelector("#submit");
+
+reservationInformation.style.display = "none";
+
 reservationSummaryBackground.style.display = "none";
 
 // declaration of table numbers
@@ -94,7 +98,68 @@ table_number = document.querySelector('#table_number').value = "23";
 let reservationsForm = document.querySelector('#reservationsForm');
 let textStatus = document.querySelector('.textStatus');
 
+
+// this function checks the availability of a reservation at a specific time
+reservationStatus = () =>
+{
+
+setInterval( ()=>
+{
+let table_number = document.querySelector('#table_number').value;
+let reservation_time = document.querySelector('#reservation_time').value;
+let reservation_date = document.querySelector('#reservation_date').value;
+let reservationStatus = `${reservation_date} ${reservation_time} ${table_number}`;
+
+// filter selected values ​​from MySQL database
+let displayReservation =  reservation.map( displayReservation => {
+return `${displayReservation.reservation_date} ${displayReservation.reservation_time} ${displayReservation.table_number}`;
+}).join(` `);
+
+// check if the value entered in the form exists in the database using RegExp
+let text = displayReservation;
+let pattern = new RegExp(reservationStatus, "i");
+let result = text.match(pattern);
+
+// if the data entered from the form does not match the data from the database, hide the infraction and show the button
+if(result === null)
+{
+reservationInformation.style.display = "none";
+submit.style.display = "block";
+}
+else
+{
+    
+// if the values ​​are equal to the database value, display information about the reserved time and hide the button
+if(result.toString() === reservationStatus )
+{
+    
+reservationInformation.style.display = "block";
+submit.style.display = "none";
+}
+else
+{
+// if not then hide the information and show the button
+reservationInformation.style.display = "none";
+submit.style.display = "block";
+}
+};
+},1000)
+};
+
+reservationStatus();
+
 reservationsForm.addEventListener('submit',  async function(e) {
+ //declaring a value from the form
+
+let name = document.querySelector('#name').value;
+let phone = document.querySelector('#phone').value;
+let email = document.querySelector('#email').value;
+let message = document.querySelector('#message').value;
+let number_of_guests = document.querySelector('#number_of_guests').value;
+reservation_date = document.querySelector('#reservation_date').value;
+reservation_time = document.querySelector('#reservation_time').value;
+table_number = document.querySelector('#table_number').value;
+
 e.preventDefault();
 let reservationCode;
 
@@ -102,15 +167,6 @@ let reservationCode;
 reservationCode = Math.floor(Math.random() * 100);
 
 
-//declaring a value from the form
-let name = document.querySelector('#name').value;
-let phone = document.querySelector('#phone').value;
-let email = document.querySelector('#email').value;
-let message = document.querySelector('#message').value;
-let number_of_guests = document.querySelector('#number_of_guests').value;
-let reservation_date = document.querySelector('#reservation_date').value;
-let reservation_time = document.querySelector('#reservation_time').value;
-let table_number = document.querySelector('#table_number').value;
 
 let formData =  new FormData();
 
@@ -126,27 +182,33 @@ formData.append('email',email);
 formData.append('message',message);
 formData.append('number_of_guests',number_of_guests);
 
+
+
+
 // post value to post_reservation_email.php  file
 await  fetch('../controllers/post_reservation_email.php', {
-method: 'POST',
-body: formData
-}); 
-
-// post value to adding_reservation.php file
-await fetch('../controllers/adding_reservation.php', {
-method: 'POST',
-body: formData
-}); 
-
-reservationSummaryBackground.style.display = "block";
+    method: 'POST',
+    body: formData
+    }); 
+    
+    // post value to adding_reservation.php file
+    await fetch('../controllers/adding_reservation.php', {
+    method: 'POST',
+    body: formData
+    }); 
+    
+    reservationSummaryBackground.style.display = "block";
 // print  status reservation
 textStatus.innerHTML = `<img class="logoHPPopup" src="../public/assets/images/logoHP.webp"><br>
 <div style="color:#009e20 ; font-size:20px; font-weight: 800;">    Twoja rezerwacja została przyjęta!</div>
 <div style=" font-size:20px; font-weight: 800;">    Kod rezerwacji: ${reservationCode}</div>
 Rezerwacja:<br>Numer stolika: ${document.querySelector('#table_number').value}<br> Data: ${reservation_date}<br> Godzina: ${reservation_time} `;
 
+
 //classy reservationSummaryBackground appears after a specified time
 setTimeout( () => {
-reservationSummaryBackground.style.display = "none";       
-},10000)            
+    reservationSummaryBackground.style.display = "none";       
+    },10000)          
 });
+
+
