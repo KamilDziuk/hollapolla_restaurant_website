@@ -15,6 +15,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+<?php require "../controllers/get_reservation.php";?>
 <!-- gtranslate start -->
 <div class="gtranslate_wrapper"></div>
 <script>window.gtranslateSettings = {"default_language":"en","native_language_names":true,"detect_browser_language":true,"languages":["en","pl","nl","fr"],"wrapper_selector":".gtranslate_wrapper","switcher_horizontal_position":"right","float_switcher_open_direction":"right"}</script>
@@ -156,5 +157,8 @@ c-47 3 -90 -2 -121 -12z"/>
 
 <script src="../scripts/reservation.js" defer></script>
 <script src="../scripts/script.js" defer></script>
+<script>
+let reservation = <?php echo json_encode($reservation) ?>
+</script>
 </body>
 </html>
