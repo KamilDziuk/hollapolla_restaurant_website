@@ -71,9 +71,10 @@
 <input type="number" id="phone" name="phone" placeholder=" Telefon" >
 <input  type="number" id="number_of_guests" name="number_of_guests" placeholder="Liczba gości"  required>
 <div class="information">Możesz wybrać stolik, klikając na numer stolika na układzie <b>restauracji</b> po lewej stronie. Numery stolików wahają się od <b>9</b> do <b>23</b>.</div>
-<input type="number" id="table_number" name="table_number" placeholder="9" min="9" max="23" required >
-<input type="date" id="reservation_date" name="reservation_date" max="2026-10-31" required >
+<input type="number" id="table_number" name="table_number" placeholder="9" min="9" max="23" required>
+<input type="date" id="reservation_date" name="reservation_date" max="2026-10-31" required>
 <input type="time" id="reservation_time" name="reservation_time" value="09:00" required>
+<div class="information reservationInformation">Stolik z podaną datą i godziną jest już zajęty.</div><br>
 <div id="contenerReservationInfo">
 </div>
 <textarea    rows="4" cols="50"  id="message" name="message" placeholder=" Wiadomość"></textarea>
