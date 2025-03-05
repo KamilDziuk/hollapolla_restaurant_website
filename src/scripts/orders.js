@@ -195,13 +195,13 @@ this.orderCodeValue = Math.floor(Math.random() * 100);
 // generating an order code
 
 //after clicking, a popup with the values ​​from the form is displayed
-submit.addEventListener('click',   async() => {
+document.querySelector("#ordersForm").addEventListener('submit', (e) => {
 orderSummaryBackground.style.display = "block";
 let first_name = document.querySelector("#first_name").value;
 let email = document.querySelector("#email").value;
 let addres = document.querySelector("#addres").value;
 let message = document.querySelector("#message").value;  
-
+e.preventDefault();
 // information about order acceptance
 textStatus.innerHTML = `
 <img class="logoHPPopup" src="../public/assets/images/logoHP.webp"><br>
