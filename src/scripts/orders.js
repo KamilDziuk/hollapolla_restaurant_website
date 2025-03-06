@@ -193,7 +193,16 @@ let  orderConfirmation = () => {
 // order value counter, if it is equal to 0 the change will be deleted
 this.orderCodeValue = Math.floor(Math.random() * 100);
 // generating an order code
+ 
+ //reduction of the sum by 10%
+reductionSum = () => {
+let sumInt = parseInt( sum.innerText);
+let  sumPercent   = sumInt/10;
+let newSum = sumInt - sumPercent;
+sum.innerText = newSum;
+}
 
+reductionSum();
 //after clicking, a popup with the values ​​from the form is displayed
 document.querySelector("#ordersForm").addEventListener('submit', (e) => {
 orderSummaryBackground.style.display = "block";
