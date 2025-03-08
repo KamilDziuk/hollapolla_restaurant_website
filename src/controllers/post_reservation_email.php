@@ -1,5 +1,8 @@
 <?php
+require_once "../config/config_postmark_token.php";
 
+// token  authorize
+$token = POSTMARK_TOKEN;
 // retrieving data from the form sent using the POST method
 $reservation_date = $_POST['reservation_date'];
 $reservationCode = $_POST['reservationCode'];
@@ -39,9 +42,9 @@ $ch = curl_init("https://api.postmarkapp.com/email"); // postmark API address to
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // set the option to return the response as a string
 
 curl_setopt($ch, CURLOPT_HTTPHEADER, [ // set HTTP headers
-    "Content-Type: application/json", // indicates that the data is in JSON format
-    "Accept: application/json", // expecting response in JSON format
-    "X-Postmark-Server-Token: $apiKey" // adding an API key to authorize the request
+"Content-Type: application/json", // indicates that the data is in JSON format
+"Accept: application/json", // expecting response in JSON format
+"X-Postmark-Server-Token: $token"  // adding an token to authorize the request
 ]);
 curl_setopt($ch, CURLOPT_POST, true);// specify that the request is a POST method
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data)); // encode data to JSON format and send in the request body
