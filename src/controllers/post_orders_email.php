@@ -1,18 +1,17 @@
 <?php
 // retrieving data from the form sent using the POST method
-$reservation_date = $_POST['reservation_date'];
-$reservationCode = $_POST['reservationCode'];
-$reservation_time = $_POST['reservation_time']; 
-$table_number = $_POST['table_number']; 
-$name = $_POST['name']; 
-$phone = $_POST['phone']; 
-$email = $_POST['email']; 
+$codeNumber = $_POST['codeNumber'];
+$orderNumber = $_POST['orderNumber'];
+$quantity = $_POST['quantity'];
+$first_name = $_POST['first_name'];
 $message = $_POST['message'];
-$number_of_guests = $_POST['number_of_guests'];
+$phone = $_POST['phone'];
+$email = $_POST['email'];
+$addres = $_POST['addres'];
+$order_date = $_POST['order_date'];
+$order_time = $_POST['order_time'];
 
-// API key to authorize sending email via Postmark
-$apiKey = ""; 
-
+// postmark
 // creating an array with email data to send
 $data = [
 "From" => "kontakt@hollapolla.nl",
@@ -22,6 +21,7 @@ $data = [
 E-mail: $email
 Kod zamówienia: $codeNumber
 Adres: $addres 
+Telefon: $phone
 Data: $order_date
 Godzina: $order_time
 Zamówienie: $orderNumber
