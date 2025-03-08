@@ -2,7 +2,6 @@
 require_once "../config/config_postmark_token.php";
 // token  authorize
 $token = POSTMARK_TOKEN;
-<?php
 // retrieving data from the form sent using the POST method
 $codeNumber = $_POST['codeNumber'];
 $orderNumber = $_POST['orderNumber'];
