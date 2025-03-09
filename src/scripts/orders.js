@@ -276,3 +276,40 @@ body: formData
 };
 
 let  orderSystem = new OrderSystem(0);
+
+// tracking form
+ let trackingForm = () => {  
+setInterval(() => {
+ 
+let ordersForm = document.querySelector("#ordersForm");
+
+// specifying the Y value of the page scroll
+let scroll = window.pageYOffset;
+
+//if the page scroll value is greater or equal to the position of the ordersForm element, change the style position of this element
+if(scroll >= ordersForm.offsetTop)
+{
+ordersForm.style.transition ="1s";
+ordersForm.style.position ="fixed";
+ordersForm.style.top ="-23%";
+}
+
+if(scroll <= 400)
+{
+ordersForm.style.transition ="1s";
+ordersForm.style.position ="absolute";
+ordersForm.style.top ="80%";
+}
+
+if(window.matchMedia("(max-width:950px)").matches ){ 
+ordersForm.style.position ="relative";
+ordersForm.style.top ="5%";
+}
+},100);
+}
+trackingForm();
+
+
+
+
+
