@@ -1,8 +1,6 @@
 <?php
-require_once "../config/config_postmark_token.php";
-// token  authorize
-$token = POSTMARK_TOKEN;
-// retrieving data from the form sent using the POST method
+
+// Retrieving data from the form sent using the POST method
 $codeNumber = $_POST['codeNumber'];
 $orderNumber = $_POST['orderNumber'];
 $quantity = $_POST['quantity'];
@@ -14,40 +12,66 @@ $addres = $_POST['addres'];
 $order_date = $_POST['order_date'];
 $order_time = $_POST['order_time'];
 
-// postmark
-// creating an array with email data to send
-$data = [
-"From" => "kontakt@hollapolla.nl",
-"To" => "kontakt@hollapolla.nl",
-"Subject" => "Nowe zamówienie, kod zamówienia: $codeNumber",
-"TextBody" => "Imię: $first_name
-E-mail: $email
-Kod zamówienia: $codeNumber
-Adres: $addres 
-Telefon: $phone
-Data: $order_date
-Godzina: $order_time
-Zamówienie: $orderNumber
-Ilość: $quantity
-Wiadomość od klienta: $message
-Zgody:
-zgoda0: Wyrażam zgodę na przetwarzanie przez HollaPolla moich danych osobowych zawartych w niniejszym formularzu kontaktowym w celu i zakresie niezbędnym do realizacji zgłoszenia.
-zgoda1: Wyrażam zgodę na przetwarzanie przez HollaPolla moich danych osobowych zawartych w niniejszym formularzu kontaktowym w celu przesyłania mi drogą elektroniczną ofert handlowych własnych produktów.
-zgoda2: Wyrażam zgodę na przetwarzanie przez HollaPolla moich danych osobowych zawartych w niniejszym formularzu kontaktowym w celu kontaktu telefonicznego przedstawicieli firmy w sprawach związanych z ofertą handlową własnych produktów."
-];
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-// initialize cURL to send email via Postmark API
-$ch = curl_init("https://api.postmarkapp.com/email"); // postmark API address to send email
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // set the option to return the response as a string
+// Including PHPMailer library files (https://github.com/PHPMailer/PHPMailer)
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
 
-curl_setopt($ch, CURLOPT_HTTPHEADER, [ // set HTTP headers
-"Content-Type: application/json", // indicates that the data is in JSON format
-"Accept: application/json", // expecting response in JSON format
-"X-Postmark-Server-Token: $token"  // adding an token  to authorize the request
-]);
-curl_setopt($ch, CURLOPT_POST, true);// specify that the request is a POST method
-curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data)); // encode data to JSON format and send in the request body
+$mail = new PHPMailer(true);
 
-$response = curl_exec($ch); // sending the request and saving the response
-curl_close($ch); // closing the cURL connection
+try {
+    // Configuring the mail server
+    $mail->isSMTP();  
+    $mail->Host = ''; // SMTP server
+    $mail->SMTPAuth = true;
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Secure connection
+    $mail->Port = 465; 
+    $mail->Username = ''; // SMTP username
+    $mail->Password = ''; // SMTP password
+
+    // Setting sender and recipient
+    $mail->setFrom(''); 
+    $mail->addAddress($_POST['email']); // Recipient's email
+    $mail->addCC(''); // Optional CC recipient
+
+    // Configuring email encoding
+    $mail->CharSet = 'UTF-8';
+    $mail->Encoding = 'base64';
+
+    // Setting email content
+    $mail->isHTML(true);
+    $mail->Subject = htmlspecialchars('Hollapolla - Your order has been successfully placed and accepted. Thank you!', ENT_QUOTES, 'UTF-8');
+    $mail->Body = nl2br(htmlspecialchars("
+        Order details:
+        Name: $first_name
+        Email: $email
+        Order Code: $codeNumber
+        Address: $addres
+        Phone: $phone
+        Date: $order_date
+        Time: $order_time
+        Order Number: $orderNumber
+        Quantity: $quantity
+        Customer Message: $message
+        Consents:
+
+        I consent to HollaPolla processing my personal data contained in this contact form for the purpose and to the extent necessary to process my request.
+
+        I consent to HollaPolla processing my personal data contained in this contact form for the purpose of sending me electronic commercial offers of its own products.
+
+        I consent to HollaPolla processing my personal data contained in this contact form for the purpose of telephone contact by the company representatives regarding the commercial offer of its own products.
+
+        Best regards, HollaPolla 🍴", ENT_QUOTES, 'UTF-8'));
+
+    // Sending the email
+    $mail->send();
+
+} catch (Exception $e) {
+    // Handling errors (currently empty)
+}
+
 ?>
+
