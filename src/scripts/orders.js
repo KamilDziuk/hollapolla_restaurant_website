@@ -257,7 +257,7 @@ formData.append('email',email);
 formData.append('addres',addres);
 formData.append('order_date',order_date);
 formData.append('order_time',order_time);
-
+formData.append('submit', submit);
 // post value to adding_orders.php  file
 await fetch(`src/controllers/adding_orders.php`,{
 method: "POST",
