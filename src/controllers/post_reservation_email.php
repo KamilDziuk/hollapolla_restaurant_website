@@ -23,7 +23,7 @@ require 'phpmailer/src/Exception.php';
 require 'phpmailer/src/PHPMailer.php';
 require 'phpmailer/src/SMTP.php';
 
-
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     $mail = new PHPMailer(true);
 
     try {
@@ -76,5 +76,6 @@ Pozdrawiamy, HollaPolla 🍴", ENT_QUOTES, 'UTF-8'));
 $mail->send();       
 } catch (Exception $e) {
         // Handling errors (currently empty)
+}
 }
 ?>
