@@ -12,6 +12,10 @@ $addres = $_POST['addres'];
 $order_date = $_POST['order_date'];
 $order_time = $_POST['order_time'];
 
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']))
+ {
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -72,6 +76,6 @@ try {
 } catch (Exception $e) {
     // Handling errors (currently empty)
 }
-
+}
 ?>
 
