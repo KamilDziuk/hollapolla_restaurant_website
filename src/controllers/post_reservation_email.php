@@ -1,8 +1,6 @@
 <?php
-require_once "../config/config_postmark_token.php";
 
-// token  authorize
-$token = POSTMARK_TOKEN;
+
 // retrieving data from the form sent using the POST method
 $reservation_date = $_POST['reservation_date'];
 $reservationCode = $_POST['reservationCode'];
@@ -14,15 +12,46 @@ $email = $_POST['email'];
 $message = $_POST['message'];
 $number_of_guests = $_POST['number_of_guests'];
 
-// API key to authorize sending email via Postmark
-$apiKey = ""; 
 
-// creating an array with email data to send
-$data = [
-"From" => "kontakt@hollapolla.nl",
-"To" => "kontakt@hollapolla.nl", 
-"Subject" => "Nowe zamówienie, kod rezerwacji: $reservationCode", 
-"TextBody" => "Imię: $name
+
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+// Including PHPMailer library files (https://github.com/PHPMailer/PHPMailer)
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
+
+
+    $mail = new PHPMailer(true);
+
+    try {
+        // Configuring the mail server
+        $mail->isSMTP();
+        $mail->Host = '';// SMTP server
+        $mail->SMTPAuth = true;
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Secure connection
+        $mail->Port = 465;
+        $mail->Username = ''; // SMTP username
+        $mail->Password = ''; // SMTP password
+
+        // Setting sender and recipient
+        $mail->setFrom('');
+        $mail->addAddress($_POST['email']); // Recipient's email
+        $mail->addCC(''); // Optional CC recipient
+
+      
+       // Configuring email encoding
+        $mail->CharSet = 'UTF-8';
+        $mail->Encoding = 'base64';
+
+          // Setting email content
+        $mail->isHTML(true);
+        $mail->Subject = htmlspecialchars('Hollapolla - Twoja rezerwacjia została przyjęta. Dziękujemy! ', ENT_QUOTES, 'UTF-8');
+        $mail->Body = nl2br(htmlspecialchars( "
+ Szczegóły zamówienia:
+Imię: $name
 Telefon: $phone
 Email: $email
 Liczba osób:  $number_of_guests
@@ -31,24 +60,21 @@ Godzina: $reservation_time
 Kod rezerwacji: $reservationCode
 Wiadomość od klienta: $message
 Numer stolika: $table_number
+
 Zgody:
-zgoda0: Wyrażam zgodę na przetwarzanie przez HollaPolla moich danych osobowych zawartych w niniejszym formularzu kontaktowym w celu i zakresie niezbędnym do realizacji zgłoszenia.
-zgoda1: Wyrażam zgodę na przetwarzanie przez HollaPolla moich danych osobowych zawartych w niniejszym formularzu kontaktowym w celu przesyłania mi drogą elektroniczną ofert handlowych własnych produktów.
-zgoda3: Wyrażam zgodę na przetwarzanie przez HollaPolla moich danych osobowych zawartych w niniejszym formularzu kontaktowym w celu kontaktu telefonicznego przedstawicieli firmy w sprawach związanych z ofertą handlową własnych produktów."
-];
 
-// initialize cURL to send email via Postmark API
-$ch = curl_init("https://api.postmarkapp.com/email"); // postmark API address to send email
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // set the option to return the response as a string
+ Wyrażam zgodę na przetwarzanie przez HollaPolla moich danych osobowych zawartych w niniejszym formularzu kontaktowym w celu i zakresie niezbędnym do realizacji zgłoszenia.
 
-curl_setopt($ch, CURLOPT_HTTPHEADER, [ // set HTTP headers
-"Content-Type: application/json", // indicates that the data is in JSON format
-"Accept: application/json", // expecting response in JSON format
-"X-Postmark-Server-Token: $token"  // adding an token to authorize the request
-]);
-curl_setopt($ch, CURLOPT_POST, true);// specify that the request is a POST method
-curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data)); // encode data to JSON format and send in the request body
+Wyrażam zgodę na przetwarzanie przez HollaPolla moich danych osobowych zawartych w niniejszym formularzu kontaktowym w celu przesyłania mi drogą elektroniczną ofert handlowych własnych produktów.
 
-$response = curl_exec($ch); // sending the request and saving the response
-curl_close($ch); // closing the cURL connection
+Wyrażam zgodę na przetwarzanie przez HollaPolla moich danych osobowych zawartych w niniejszym formularzu kontaktowym w celu kontaktu telefonicznego przedstawicieli firmy w sprawach związanych z ofertą handlową własnych produktów.
+       
+       
+Pozdrawiamy, HollaPolla 🍴", ENT_QUOTES, 'UTF-8'));
+
+ // Sending the email      
+$mail->send();       
+} catch (Exception $e) {
+        // Handling errors (currently empty)
+}
 ?>
