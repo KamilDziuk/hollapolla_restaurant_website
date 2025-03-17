@@ -12,6 +12,8 @@ $order_date = $_POST['order_date'];
 $order_time = $_POST['order_time'];
 $message= $_POST['message'];
 
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit']))
+ {
 // executes an INSERT INTO query on the orders table, saving the order data
 try {  
 $sql = "INSERT INTO orders (codeNumber, orderNumber, quantity, first_name, email, addres, order_date, order_time, message) 
@@ -37,6 +39,7 @@ die();
 //uses try-catch to handle possible errors
 } catch (PDOException $e) {
 echo "Error adding to MySQL database" . $e->getMessage();
+}
 }
 ?>
 
