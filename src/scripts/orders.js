@@ -205,6 +205,10 @@ sum.innerText = newSum;
 reductionSum();
 //after clicking, a popup with the values ​​from the form is displayed
 document.querySelector("#ordersForm").addEventListener('submit', (e) => {
+
+setTimeout(() => { 
+location.reload()
+}, 10000)
 orderSummaryBackground.style.display = "block";
 let first_name = document.querySelector("#first_name").value;
 let email = document.querySelector("#email").value;
