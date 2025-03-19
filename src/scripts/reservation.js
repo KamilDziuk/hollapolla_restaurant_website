@@ -149,6 +149,10 @@ submit.style.display = "block";
 reservationStatus();
 
 reservationsForm.addEventListener('submit',  async function(e) {
+
+ setTimeout(() => { 
+location.reload()
+}, 10000)
  //declaring a value from the form
 
 let name = document.querySelector('#name').value;
