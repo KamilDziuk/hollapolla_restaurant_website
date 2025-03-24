@@ -35,18 +35,20 @@ return `${allOrders.order_date}`;
 });
 
 let displayOrders =  orders.map( displayOrders => {
-return `<br>|<br> 
-Code number: ${displayOrders.codeNumber},<br>
-Order number: ${displayOrders.orderNumber},<br>
-Quantity: ${displayOrders.quantity},<br>
-First name: ${displayOrders.first_name},<br>
-Email: ${displayOrders.email},<br>
-Addres: ${displayOrders.addres},<br>
-Order date: ${displayOrders.order_date},<br>
-Order time: ${displayOrders.order_time},<br>
-Message: ${displayOrders.message} <br> |`;
-}).join(`\n`)
 
+return `<div class ="items_box"><br>**********
+<div class ="item_value"> Code number: <div class ="distinction_code">${displayOrders.codeNumber}</div></div>
+<div class ="item_value">  Dish: <div class ="distinction"> ${displayOrders.orderNumber}</div></div> 
+<div class ="item_value "> Quantity: <div class ="distinction color"> ${displayOrders.quantity}</div> x</div>
+First name: ${displayOrders.first_name}<br>
+Email: ${displayOrders.email}<br>
+<div class ="item_value"> Phone: <div class ="distinction"> ${displayOrders.phone}</div></div>
+<div class ="item_value"> Addres: <div class ="distinction"> ${displayOrders.addres}</div></div>
+Order date: ${displayOrders.order_date}<br>
+Order time: ${displayOrders.order_time}<br>
+Message: ${displayOrders.message}<br>
+<br>**********</div>`;
+}).join(`\n`)
 document.querySelector("#printOrders").innerHTML = displayOrders;
 formDataDate = new FormData()
 formDataDate.append('currentDateResult',currentDateResult);
